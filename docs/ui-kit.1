@@ -1,0 +1,1779 @@
+
+
+
+  
+
+
+
+
+
+  
+
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> 	<html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<title>User Interface UI Kit | Gumby Framework</title>
+    <meta name="description" content="Get the Gumby UI kit full of user interface goodies like flexible navigations, buttons and tabs, form elements and video embeds" />
+    <meta name="author" content="/humans.txt">
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+
+    <meta name="google-site-verification" content="TTuqn2YYupgiGLoJebl_q8v1FUvs9VZW08BuZ7aiGuY" />
+
+    <!--Facebook Metadata /-->
+  	<meta property="og:url" content="http://gumbyframework.com/docs/ui-kit" />
+    <meta property="og:image" content="http://gumbyframework.com/facebook.jpg?gumby2" />
+  	<meta property="og:description" content="Get the Gumby UI kit full of user interface goodies like flexible navigations, buttons and tabs, form elements and video embeds"/>
+  	<meta property="og:title" content="User Interface UI Kit | Gumby Framework"/>
+
+    <!--Google+ Metadata /-->
+    <meta itemprop="url" content="http://gumbyframework.com/docs/ui-kit" />
+  	<meta itemprop="name" content="User Interface UI Kit | Gumby Framework">
+  	<meta itemprop="description" content="Get the Gumby UI kit full of user interface goodies like flexible navigations, buttons and tabs, form elements and video embeds">
+  	<meta itemprop="image" content="http://gumbyframework.com/facebook.jpg?gumby2">
+
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="../css/gumby.css">
+    <link rel="stylesheet" href="../js/libs/google-code-prettify/prettify.css">
+
+    <script src="../components/gumby/js/libs/modernizr-2.6.2.min.js"></script>
+  </head>
+
+  <body onload="prettyPrint()" class="docs uikit" id="inner-doc">
+    <nav id="navbar-main-nav" class="navbar">
+  <div class="row">
+    <a class="toggle" gumby-trigger="#navbar-main-nav #main-nav" href="ui-kit.1#"><i class="icon-menu"></i></a>
+    <h1 class="four columns logo">
+      <a href="http://gumbyframework.com/">
+        <img src="../img/gumby_mainlogo.png" gumby-retina>
+      </a>
+    </h1>
+    <nav class="ten columns pull_right">
+      <ul id="main-nav">
+        <li><a href="ui-kit.1#">Features</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="http://gumbyframework.com/features">The Grid</a></li>
+              <li><a href="http://gumbyframework.com/features/prototype">Rapid Prototyping</a></li>
+              <li><a href="http://gumbyframework.com/features/sass">Sass</a></li>
+              <li><a href="http://gumbyframework.com/features/mobile">Mobile</a></li>
+              <li><a href="http://gumbyframework.com/showcase">Showcase</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="ui-kit.1#">Documentation</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="index.html">Getting Started</a></li>
+              <li><a href="grid/index.html">The Grid</a></li>
+              <li><a href="ui-kit/index.html">UI Kit</a></li>
+              <li><a href="sass/index.html">Sass</a></li>
+              <li><a href="javascript/index.html">JavaScript</a></li>
+              <li><a href="http://gumbyframework.com/demo">Demo</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="http://gumbyframework.com/customize">Customize</a></li>
+        <li><a href="https://plus.google.com/communities/108760896951473344451" target="_blank">Community</a></li>
+        <li>
+          <p class="medium pretty default btn icon-github icon-left">
+            <a href="https://github.com/GumbyFramework/Gumby"> GitHub</a>
+          </p>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+
+    <div class="container shaded">
+      <div id="inner-nav" class="row">
+        <h2 class="three columns left-center">UI Kit</h2>
+        <ul class="six columns pull_right">
+          <li>
+            <div class="medium metro rounded btn"><a href="grid/index.html">The Grid</a></div>
+          </li>
+          <li>
+            <div class="medium metro rounded btn active"><a href="ui-kit/index.html">UI Kit</a></div>
+          </li>
+          <li>
+            <div class="medium metro rounded btn"><a href="sass/index.html">Sass</a></div>
+          </li>
+          <li>
+            <div class="medium metro rounded btn"><a href="javascript/index.html">JavaScript</a></div>
+          </li>
+          <li>
+            <div class="medium metro rounded btn"><a href="http://gumbyframework.com/demo">Demo</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container nopad">
+      <div class="row">
+        <section class="four columns">
+          <nav id="sidebar-nav-holder" class="vertical-nav" gumby-fixed="top|[data-target='icons']">
+            <ul id="sidebar-nav">
+              
+                <li class="active">
+                  <a href="ui-kit.1#interflavors" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='interflavors']">Interflavors</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#buttons" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='buttons']">Buttons</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#indicators" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='indicators']">Indicators</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#forms" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='forms']">Forms</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#navigation" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='navigation']">Navigation</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#tabs" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='tabs']">Tabs</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#skip-links" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='skip-links']">Skip Links</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#toggles-switches" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='toggles-switches']">Toggles &amp; Switches</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#drawers" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='drawers']">Drawers</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#intrinsic-ratio-video-embed" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='intrinsic-ratio-video-embed']">Intrinsic Ratio Video Embed</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#vertical-alignment" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='vertical-alignment']">Vertical Alignment</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#fixed-positions" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='fixed-positions']">Fixed Positions</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#responsive-images" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='responsive-images']">Responsive Images</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#retina-images" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='retina-images']">Retina Images</a>
+                </li>
+                
+                <li>
+                  <a href="ui-kit.1#icons" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='icons']">Icons</a>
+                </li>
+                
+            </ul>
+          </nav>
+        </section>
+        <section class="nine columns push_one" id="docs-content">
+          
+
+          <div class="left-center" data-target="interflavors">
+            <h2>Interflavors</h2>
+            <p>Metro style and semi-flat design are all the rage nowadays. Gumby 2’s new, rearchitected UI kit embraces the latest design trends and allows you to pick and choose, or even mix flat design with more graduated design styles. There are built in classes for mixing and matching the two Gumby Framework UI flavors. Using the <span class="label light">.metro</span> class gets you flat design, while <span class="label light">.pretty</span> will get you some pretty gradients. Mix, match, and define your design language.</p>
+
+<h3>Attributes</h3>
+
+<p>Many of the UI modules in the Gumby UI kit support a number of optional attributes that can be used to customize the modules functionality. In all instances you have the choice of using a <span class="label light">data-</span> prefix, a <span class="label light">gumby-</span> prefix or no prefix at all. Gumby supports all three of these options so take your pick!</p>
+          </div>
+
+          
+
+          <div class="left-center" data-target="buttons">
+            <h2>Buttons</h2>
+            <p>Gumby 2's UI Kit has been completely rearchitected — no element has received a bigger facelift and more features than our buttons. Buttons have been completely reimagined from the ground up to allow you even more flexibility than ever before as well as improved mobile performance seamlessly switching from <span class="label light">click</span> to <span class="label light">tap</span> events.</p>
+
+<p>There are tons of new classes at your disposal to change the button colors, properties, and even add icons to the left or right of the buttons.</p>
+
+<p>There are still styles for the entire hierarchy of buttons that your project could need, and then some, but now there's more than ever before! You can now define your button size, color, ui, add or remove rounded corners, and even apply some pretty icons thanks to <span class="label light">::before</span> and <span class="label light">::after</span> pseudo elements! Simply add the class for the desired function of the button:</p>
+
+<div class="example-grid btnmarg">
+    <div class="row">
+        <div class="seven columns">
+            <h4 class="lead">Metro Style</h4>
+            <div class="medium primary btn"><a href="ui-kit.1#">Primary</a></div>
+            <div class="medium secondary btn"><a href="ui-kit.1#">Secondary</a></div>
+            <div class="medium default btn"><a href="ui-kit.1#">Default</a></div>
+            <div class="medium info btn"><a href="ui-kit.1#">Info</a></div>
+            <div class="medium danger btn"><a href="ui-kit.1#">Danger</a></div>
+            <div class="medium warning btn"><a href="ui-kit.1#">Warning</a></div>
+            <div class="medium success btn"><a href="ui-kit.1#">Success</a></div>
+            <div class="medium info btn icon-left entypo icon-mail"><a href="ui-kit.1#">Icon Left</a></div>
+            <div class="medium default btn icon-right entypo icon-camera"><a href="ui-kit.1#">Icon Right</a></div><div class="medium default btn"><input type="submit" value="Submit" /></div>
+            <div class="medium info btn"><button>Button</button></div>
+        </div>
+        <div class="seven columns pretty">
+            <h4 class="lead">Pretty Style</h4>
+            <div class="pretty medium primary btn"><a href="ui-kit.1#">Primary</a></div>
+            <div class="pretty medium secondary btn"><a href="ui-kit.1#">Secondary</a></div>
+            <div class="pretty medium default btn"><a href="ui-kit.1#">Default</a></div>
+            <div class="pretty medium info btn"><a href="ui-kit.1#">Info</a></div>
+            <div class="pretty medium danger btn"><a href="ui-kit.1#">Danger</a></div>
+            <div class="pretty medium warning btn"><a href="ui-kit.1#">Warning</a></div>
+            <div class="pretty medium success btn"><a href="ui-kit.1#">Success</a></div>
+            <div class="medium info btn icon-left icon-user"><a href="ui-kit.1#">Icon Left</a></div>
+            <div class="medium default btn icon-right icon-camera"><a href="ui-kit.1#">Icon Right</a></div>
+            <div class="pretty medium default btn"><input type="submit" value="Submit" /></div>
+            <div class="pretty medium info btn"><button>Button</button></div>
+        </div>
+    </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;medium primary btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Primary&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium secondary btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Secondary&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium default btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Default&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium info btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Info&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium danger btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Danger&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium warning btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Warning&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium success btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Success&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium info btn icon-left entypo icon-mail&quot;&gt;&lt;a href=&quot;#&quot;&gt;Icon Left&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium default btn icon-right entypo icon-camera&quot;&gt;&lt;a href=&quot;#&quot;&gt;Icon Right&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium default btn&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;medium info btn&quot;&gt;&lt;button&gt;Button&lt;/button&gt;&lt;/div&gt;</pre>
+</div>
+
+<div class="example-grid btnmarg">
+    <div class="row">
+        <div class="seven columns">
+            <h4 class="lead">Sizes</h4>
+            <div class="xlarge btn default"><a href="ui-kit.1#">Extra Large</a></div>
+            <div class="large btn default"><a href="ui-kit.1#">Large</a></div>
+            <div class="medium btn default"><a href="ui-kit.1#">Medium</a></div>
+            <div class="small btn default"><a href="ui-kit.1#">Small</a></div>
+        </div>
+        <div class="seven columns">
+            <h4 class="lead">Styles</h4>
+            <div class="medium oval btn default"><a href="ui-kit.1#">Oval</a></div>
+            <div class="medium metro rounded btn default"><a href="ui-kit.1#">Rounded</a></div>
+            <div class="medium squared btn default"><a href="ui-kit.1#">Squared</a></div>
+            <div class="medium btn pill-left default"><a href="ui-kit.1#">Pill Left</a></div>
+            <div class="medium btn pill-right default"><a href="ui-kit.1#">Pill Right</a></div>
+        </div>
+    </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;xlarge btn default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Extra Large&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;large btn default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Large&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium btn default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Medium&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;small btn default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Small&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium oval btn default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Oval&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium metro rounded btn default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Rounded&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium squared btn default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Squared&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium btn pill-left default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Pill Left&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;medium btn pill-right default&quot;&gt;&lt;a href=&quot;#&quot;&gt;Pill Right&lt;/a&gt;&lt;/div&gt;</pre>
+</div>
+
+<p>You can even mix and match classes to create smaller, or alternate versions of buttons found throught your project. Mix a secondary class and a small class on a button and check out the results... Now, that is how the cascade was meant to work! These classes work great for prototyping, and with a little color tweaking to fit your project's final design - they are tight and solid enough to work in production.</p>
+          </div>
+
+          
+
+          <div class="left-center" data-target="indicators">
+            <h2>Indicators</h2>
+            <p>Gumby 2 provides three indicator classes that can be used to highlight data and provide user feedback. Use the same interflavour styling options with the three indicators, badges, labels and alerts and let your users know what for!</p>
+
+<div class="example-grid">
+    <div class="row">
+        <div class="seven columns">
+            <h4 class="lead">Badges</h4>
+            <ul>
+                <li class="primary badge">2</li>
+                <li class="secondary badge">2</li>
+                <li class="default badge">2</li>
+                <li class="info badge">2</li>
+                <li class="danger badge">2</li>
+                <li class="warning badge">2</li>
+                <li class="success badge">2</li>
+                <li class="light badge">2</li>
+                <li class="dark badge">2</li>
+            </ul>
+        </div>
+        <div class="seven columns">
+            <h4 class="lead">Labels</h4>
+            <ul>
+                <li class="primary label">Primary</li>
+                <li class="secondary label">Secondary</li>
+                <li class="default label">Default</li>
+                <li class="info label">Info</li>
+                <li class="danger label">Important</li>
+                <li class="warning label">Warning</li>
+                <li class="success label">Success</li>
+                <li class="light label">Light</li>
+                <li class="dark label">Dark</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="ten columns">
+            <h4 class="lead">Alerts</h4>
+            <ul>
+                <li class="primary alert">KHAAAAAAAAAAAAAAANNNN!!!!</li>
+                <li class="secondary alert">We are the Silence. And Silence will fall!</li>
+                <li class="default alert">Fez's are cool.</li>
+                <li class="info alert">Don't blink. Blink and you're dead.</li>
+                <li class="danger alert">I’m sorry, Dave. I’m afraid I can’t do that.</li>
+                <li class="warning alert">My spidey sense is tingling...</li>
+                <li class="success alert">Great Success! Very nice!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;four columns&quot;&gt;
+    &lt;li class=&quot;primary badge&quot;&gt;2&lt;/li&gt;
+    &lt;li class=&quot;secondary badge&quot;&gt;2&lt;/li&gt;
+    &lt;li class=&quot;default badge&quot;&gt;2&lt;/li&gt;
+    &lt;li class=&quot;info badge&quot;&gt;2&lt;/li&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;four columns&quot;&gt;
+    &lt;li class=&quot;danger label&quot;&gt;Important&lt;/li&gt;
+    &lt;li class=&quot;warning label&quot;&gt;Warning&lt;/li&gt;
+    &lt;li class=&quot;success label&quot;&gt;Success&lt;/li&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+ &lt;div class=&quot;four columns&quot;&gt;
+    &lt;li class=&quot;primary alert&quot;&gt;KHAAAAAAAAAAAAAAANNNN!!!!&lt;/li&gt;
+    &lt;li class=&quot;secondary alert&quot;&gt;We are the Silence. And Silence will fall!&lt;/li&gt;
+    &lt;li class=&quot;danger alert&quot;&gt;I’m sorry, Dave. I’m afraid I can’t do that.&lt;/li&gt;
+    &lt;li class=&quot;success alert&quot;&gt;Great Success! Very nice!&lt;/li&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="forms">
+            <h2>Forms</h2>
+            <p>Lets be honest, forms are the most tedious things to mark up on the planet. They're absolutely terrible for the productivity and blood pressure of your front-end developers. Gumby Framework tries to lessen the emotional scarring incurred by your developers when coding forms by adding some simple classes to make your forms pretty without you having to worry about coming up with your own structure. Forms are another element that we’ve completely reimagined for Gumby 2. We encourage you to copy/paste our form elements and customize from there. It will save you time, and headaches. Gumby Framework includes styles for your basic form elements, <span class="label light">input</span>, <span class="label light">select</span>, as well as pretty <span class="label light">checkboxes</span>, <span class="label light">radio buttons</span>, and even more form validation classes.</p>
+
+<h3>Text Inputs</h3>
+<p>For text inputs we have each input nested within <span class="label light">.field</span> which essentially creates spacing between form field rows. You must define the input type + <span class="label light">.input</span> for input styles to acquire styling. Acceptable input types are <span class="label light">.search</span>, <span class="label light">.text</span>, <span class="label light">.password</span>, <span class="label light">.email</span>, <span class="label light">.phone</span>, and <span class="label light">.numeric</span></p>
+
+<div class="example-grid">
+  <form>
+    <div class="row">
+      <ul class="seven columns">
+        <li class="field"><input class="text input" type="text" placeholder="Text input" /></li>
+        <li class="field"><input class="email input" type="email" placeholder="Email input" /></li>
+        <li class="field"><input class="password input" type="password" placeholder="Password input" /></li>
+        <li class="field"><input class="phone input" type="tel" placeholder="Telephone Number" /></li>
+        <li class="field"><input class="numeric input" type="number" placeholder="Numeric input" /></li>
+        <li class="field"><input class="search input" type="searcg" placeholder="Search input" /></li>
+        <li class="field"><textarea class="input textarea" placeholder="Textarea" rows="4"></textarea></li>
+      </ul>
+      <ul class="seven columns">
+        <li class="field"><input class="xxwide text input" type="text" placeholder="xxwide input" /></li>
+        <li class="field">
+          <input class="xwide email input" type="email" placeholder="xwide input" />
+          <input class="xnarrow text input" type="text" placeholder="xnarrow input" />
+        </li>
+        <li class="field">
+          <input class="wide text input" type="password" placeholder="wide input" />
+          <input class="narrow text input" type="text" placeholder="narrow input" />
+        </li>
+        <li class="field">
+          <input class="normal text input" type="text" placeholder="normal input" />
+          <input class="normal text input" type="text" placeholder="normal input" />
+        </li>
+        <li class="field">
+          <input class="narrow text input" type="text" placeholder="narrow input" />
+          <input class="wide text input" type="text" placeholder="wide input" />
+        </li>
+        <li class="field">
+          <input class="xnarrow text input" type="text" placeholder="xnarrow input" />
+          <input class="xwide text input" type="text" placeholder="xwide input" />
+        </li>
+        <li class="field success"><input class="text input" type="text" placeholder="Text input" /></li>
+        <li class="field warning"><input class="email input" type="email" placeholder="Email input" /></li>
+        <li class="field danger"><input class="password input" type="password" placeholder="Password input" /></li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;ul class=&quot;seven columns&quot;&gt;
+    &lt;li class=&quot;field&quot;&gt;&lt;input class=&quot;text input&quot; type=&quot;text&quot; placeholder=&quot;Text input&quot; /&gt;&lt;/li&gt;
+    &lt;li class=&quot;field&quot;&gt;&lt;input class=&quot;email input&quot; type=&quot;email&quot; placeholder=&quot;Email input&quot; /&gt;&lt;/li&gt;
+    &lt;li class=&quot;field&quot;&gt;
+      &lt;input class=&quot;password input&quot; type=&quot;password&quot; placeholder=&quot;Password input&quot; /&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class=&quot;seven columns&quot;&gt;
+    &lt;li class=&quot;field&quot;&gt;
+      &lt;input class=&quot;wide text input&quot; type=&quot;password&quot; placeholder=&quot;wide input&quot; /&gt;
+      &lt;input class=&quot;narrow text input&quot; type=&quot;text&quot; placeholder=&quot;narrow input&quot; /&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;field success&quot;&gt;
+      &lt;input class=&quot;text input&quot; type=&quot;text&quot; placeholder=&quot;Text input&quot; /&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;field warning&quot;&gt;
+      &lt;input class=&quot;email input&quot; type=&quot;email&quot; placeholder=&quot;Email input&quot; /&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;field danger&quot;&gt;
+      &lt;input class=&quot;password input&quot; type=&quot;password&quot; placeholder=&quot;Password input&quot; /&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<h3>Conjoined Inputs</h3>
+<p>Conjoined inputs are an awesome new addition. You can add <span class="label light">.append</span>, or <span class="label light">.prepend</span> to your field declaration in order to add <span class="label light">.adjoined</span> spans to your text inputs! This will allow you to add more direction, specificity, and context for your users. You can even append or prepend buttons and inputs to each other in order to make creative new interface solutions!</p>
+
+<div class="example-grid">
+  <form>
+    <div class="row">
+      <ul class="seven columns">
+        <li class="prepend field">
+          <span class="adjoined">@</span>
+          <input class="xwide text input" type="text" placeholder="Text input" />
+        </li>
+        <li class="append field">
+          <input class="xwide email input" type="email" placeholder="Email input" />
+          <span class="adjoined">@</span>
+        </li>
+        <li class="prepend append field">
+          <span class="adjoined">$</span>
+          <input class="wide text input" type="text" placeholder="Text input" />
+          <span class="adjoined">.00</span>
+        </li>
+        <li class="prepend field">
+          <div class="medium primary btn"><a href="ui-kit.1#">Go</a></div>
+          <input class="wide text input" type="text" placeholder="Text input" />
+        </li>
+      </ul>
+      <ul class="seven columns">
+        <li class="append field">
+          <input class="wide email input" type="email" placeholder="Email input" />
+          <div class="medium primary btn"><a href="ui-kit.1#">Go</a></div>
+        </li>
+        <li class="prepend append field">
+          <span class="adjoined">$</span>
+          <input class="normal text input" type="text" placeholder="Text input" />
+          <div class="medium primary btn"><a href="ui-kit.1#">Go</a></div>
+        </li>
+        <li class="prepend append double field">
+          <input class="text input" type="text" placeholder="Text input" />
+          <input class="password input" type="password" placeholder="Password input" />
+        </li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;ul class=&quot;ten columns&quot;&gt;
+    &lt;li class=&quot;prepend field&quot;&gt;
+      &lt;span class=&quot;adjoined&quot;&gt;@&lt;/span&gt;
+      &lt;input class=&quot;xwide text input&quot; type=&quot;text&quot; placeholder=&quot;Text input&quot; /&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;append field&quot;&gt;
+      &lt;input class=&quot;xwide email input&quot; type=&quot;email&quot; placeholder=&quot;Email input&quot; /&gt;
+      &lt;span class=&quot;adjoined&quot;&gt;@&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;append field&quot;&gt;
+      &lt;input class=&quot;wide email input&quot; type=&quot;email&quot; placeholder=&quot;Email input&quot; /&gt;
+      &lt;div class=&quot;medium primary btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Go&lt;/a&gt;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;prepend append field&quot;&gt;
+      &lt;span class=&quot;adjoined&quot;&gt;$&lt;/span&gt;
+      &lt;input class=&quot;normal text input&quot; type=&quot;text&quot; placeholder=&quot;Text input&quot; /&gt;
+      &lt;div class=&quot;medium primary btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Go&lt;/a&gt;&lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<h3>Fancy Selects</h3>
+<p>Selects are one of the worst form elements to customize with CSS. Every solution is pretty much a bandaid which covers the gaping wound that is the select element. Well, ours sort of is too. Its sad to say this, but there is really no better way to prettify a select element. One bonus here is that the new selects in Gumby 2 use ZERO javascript and pull up native select interfaces on mobile! We start by adding a container element within the <span class="label light">class="field row"</span>, we will assign this element the class <span class="label light">.picker</span> to initialize the picker ui kit styling magic. Inside of the picker you will need to put in your traditional select element and all of its options. The magic happens by hiding the default dropdown arrows by making the select longer than the containing picker which has overflow: hidden; applied to it. This lets you style the default select element, while hiding the ugliest parts of it and supplanting your own.</p>
+
+<div class="example-grid" id="example-select">
+  <form>
+    <div class="row">
+      <ul class="ten columns">
+        <li class="field">
+          <div class="row">
+            <label class="label default" id="blocklabel">Favorite Dalek Phrase</label>
+          </div>
+          <div class="picker">
+            <select>
+              <option value="#" disabled>Favorite Dalek phrase...</option>
+              <option>EXTERMINATE</option>
+              <option>EXTERMINATE</option>
+              <option>EXTERMINATE</option>
+              <option>EXTERMINATE</option>
+              <option>EXTERMINATE</option>
+              <option>EXTERMINATE</option>
+              <option>EXTERMINATE</option>
+              <option>EXTERMINATE</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;ul class=&quot;ten columns&quot;&gt;
+    &lt;li class=&quot;field&quot;&gt;
+      &lt;div class=&quot;picker&quot;&gt;
+        &lt;select&gt;
+          &lt;option value=&quot;#&quot; disabled&gt;Favorite Dalek phrase...&lt;/option&gt;
+          &lt;option&gt;EXTERMINATE&lt;/option&gt;
+          &lt;option&gt;EXTERMINATE&lt;/option&gt;
+          &lt;option&gt;EXTERMINATE&lt;/option&gt;
+          &lt;option&gt;EXTERMINATE&lt;/option&gt;
+          &lt;option&gt;EXTERMINATE&lt;/option&gt;
+          &lt;option&gt;EXTERMINATE&lt;/option&gt;
+          &lt;option&gt;EXTERMINATE&lt;/option&gt;
+          &lt;option&gt;EXTERMINATE&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<h3>Fieldsets &amp; Legends</h3>
+<p>We left out fieldsets and legends from the initial version of the Gumby Framework because of time constraints. Now they’re in there and lookin’ lovely!</p>
+
+<div class="example-grid">
+  <form>
+    <div class="row">
+      <fieldset class="ten columns">
+        <legend>Fieldset with legend</legend>
+        <ul>
+          <li class="field">
+            <label class="inline" for="text1">Label 1</label>
+            <input class="wide text input" id="text1" type="text" placeholder="wide input" />
+          </li>
+          <li class="field">
+            <label class="inline" for="text2">Label 2</label>
+            <input class="wide password input" id="text2" type="password" placeholder="wide input" />
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+  </form>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;fieldset class=&quot;ten columns&quot;&gt;
+    &lt;legend&gt;Fieldset with legend&lt;/legend&gt;
+    &lt;ul&gt;
+      &lt;li class=&quot;field&quot;&gt;
+        &lt;label class=&quot;inline&quot; for=&quot;text1&quot;&gt;Label 1&lt;/label&gt;
+        &lt;input class=&quot;wide text input&quot; id=&quot;text1&quot; type=&quot;text&quot; placeholder=&quot;wide input&quot; /&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;field&quot;&gt;
+        &lt;label class=&quot;inline&quot; for=&quot;text2&quot;&gt;Label 2&lt;/label&gt;
+        &lt;input class=&quot;wide password input&quot; id=&quot;text2&quot; type=&quot;password&quot; placeholder=&quot;wide input&quot; /&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/fieldset&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<h3>Radio Buttons &amp; Checkboxes</h3>
+<p>Everyone knows that default radio buttons and checkboxes are ugly. Gumby 2’s reimagined form elements are just the cure! They’re native, and sexy, and use the fantastic <a href="http://www.entypo.com/">entypo icons</a> that are included in every Gumby Framework installation!</p>
+
+<div class="example-grid">
+<form>
+  <div class="row">
+    <ul class="five columns">
+      <li class="field">
+        <label class="checkbox checked" for="check1">
+          <input name="checkbox[]" id="check1" value="1" type="checkbox" checked="checked">
+          <span></span> Checkbox 1
+        </label>
+        <label class="checkbox" for="check2">
+          <input name="checkbox[]" id="check2" value="2" type="checkbox">
+          <span></span> Checkbox 2
+        </label>
+        <label class="checkbox" for="check3">
+          <input name="checkbox[]" id="check3" value="3" type="checkbox">
+          <span></span> Checkbox 3
+        </label>
+      </li>
+    </ul>
+    <ul class="five columns">
+      <li class="field">
+        <label class="radio checked" for="radio1">
+          <input name="radio" id="radio1" value="1" type="radio" checked="checked">
+          <span></span> Radio Button 1
+        </label>
+        <label class="radio" for="radio2">
+          <input name="radio" id="radio2" value="2" type="radio">
+          <span></span> Radio Button 2
+        </label>
+        <label class="radio" for="radio3">
+          <input name="radio" id="radio3" value="3" type="radio">
+          <span></span> Radio Button 3
+        </label>
+      </li>
+    </ul>
+  </div>
+</form>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;ul class=&quot;five columns&quot;&gt;
+    &lt;li class=&quot;field&quot;&gt;
+      &lt;label class=&quot;checkbox checked&quot; for=&quot;check1&quot;&gt;
+        &lt;input name=&quot;checkbox[]&quot; id=&quot;check1&quot; value=&quot;1&quot; type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt;
+        &lt;span&gt;&lt;/span&gt; Checkbox 1
+      &lt;/label&gt;
+      &lt;label class=&quot;checkbox&quot; for=&quot;check2&quot;&gt;
+        &lt;input name=&quot;checkbox[]&quot; id=&quot;check2&quot; value=&quot;2&quot; type=&quot;checkbox&quot;&gt;
+        &lt;span&gt;&lt;/span&gt; Checkbox 2
+      &lt;/label&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class=&quot;five columns&quot;&gt;
+    &lt;li class=&quot;field&quot;&gt;
+      &lt;label class=&quot;radio checked&quot; for=&quot;radio1&quot;&gt;
+        &lt;input name=&quot;radio&quot; id=&quot;radio1&quot; value=&quot;1&quot; type=&quot;radio&quot; checked=&quot;checked&quot;&gt;
+        &lt;span&gt;&lt;/span&gt; Radio Button 1
+      &lt;/label&gt;
+      &lt;label class=&quot;radio&quot; for=&quot;radio2&quot;&gt;
+        &lt;input name=&quot;radio&quot; id=&quot;radio2&quot; value=&quot;2&quot; type=&quot;radio&quot;&gt;
+        &lt;span&gt;&lt;/span&gt; Radio Button 2
+      &lt;/label&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="navigation">
+            <h2>Navigation</h2>
+            <p>Our basic navigation uses CSS3's <span class="label light">display:table;</span> property to allow you to build the most flexible navigation possible. So your client wants to add an item to the main navigation in the final phase of development? Not a problem. Each navigation item is set to <span class="label light">display:table-cell;</span> so that when you add something to the navigation, its as simple as adding a list item. That means no more math for you, and no more battling with the gods of CSS to achieve that perfect balance that you spent over an hour to achieve when you first styled it — in fact, that hour you spent in the first place is saved because this navigation takes only seconds to implement!</p>
+
+<p>In order to implement the basic navigation, all you need to do is add either a <span class="label light">&lt;nav&gt;</span> or a <span class="label light">&lt;div&gt;</span> that has <span class="label light">class="navbar"</span> to your project and then nest your <span class="label light">&lt;ul&gt;</span> populated with the desired nav items within it. You can even toss buttons and search fields into your nav without worry. They automagically align vertically, and horizontally! The navbar styles also allows you to add dropdowns to your navigation in a very easy, modular way. Nest a <span class="label light">&lt;div&gt;</span> with <span class="label light">class="dropdown"</span> inside one of your navigation list items, and the contents will drop down when a user mouses over that item. The Gumby Framework dropdowns are pure CSS, no javascript required! By popular demand, Gumby 2's navigation now supports nested dropdowns as well!</p>
+
+<h3>Mobile Navigation</h3>
+<p>The navigation responds beautifully through the use of Toggles (check out the <a href="ui-kit/index.html#!/toggles-switches" class="skip" gumby-goto="[data-target='toggles-switches']">toggles docs</a> for more info). Simply add an anchor directly inside your <span class="label light">&lt;nav&gt;</span> with <span class="label light">class="toggle" data-trigger=".navbar &gt; ul"</span>, ensuring data-trigger targets your navbar <span class="label light">&lt;ul&gt;</span>. We've gotten rid of the need for extra images, the new toggle handle uses the embedded <a href="http://www.entypo.com/">entypo icons</a>!</p>
+<p>The <a href="https://github.com/GumbyFramework/Gumby/blob/master/js/libs/ui/gumby.navbar.js" target="_blank">Navbar JS module</a> improves the navigation on touch devices by binding to tap events rather than relying on the inconsistent 'hover' event on touch devices. It is not required although highly recommended.</p>
+<div class="example-grid" id="example-nav">
+    <div class="navbar row nav1">
+      <a class="toggle" gumby-trigger="#example-nav > .nav1 > ul" href="ui-kit.1#"><i class="icon-menu"></i></a>
+      <h1 class="four columns logo">
+        <a href="ui-kit.1#">
+          <img src="../img/gumby_mainlogo.png" gumby-retina />
+        </a>
+      </h1>
+      <ul class="eight columns">
+        <li><a href="ui-kit.1#">Features</a></li>
+        <li>
+          <a href="ui-kit.1#">Documentation</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="ui-kit.1#">The Grid</a></li>
+              <li><a href="ui-kit.1#">UI Kit</a></li>
+              <li><a href="ui-kit.1#">Sass</a></li>
+              <li><a href="ui-kit.1#">JavaScript</a></li>
+              <li><a href="ui-kit.1#">Demo</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="ui-kit.1#">Customize</a></li>
+      </ul>
+    </div>
+    <div class="navbar pretty row nav2">
+      <a class="toggle" gumby-trigger="#example-nav > .nav2 > ul" href="ui-kit.1#"><i class="icon-menu"></i></a>
+      <h1 class="four columns logo">
+        <a href="ui-kit.1#">
+          <img src="../img/gumby_mainlogo.png" gumby-retina />
+        </a>
+      </h1>
+      <ul class="eight columns">
+        <li><a href="ui-kit.1#">Features</a></li>
+        <li>
+          <a href="ui-kit.1#">Documentation</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="ui-kit.1#">The Grid</a></li>
+              <li><a href="ui-kit.1#">UI Kit</a></li>
+              <li><a href="ui-kit.1#">Sass</a></li>
+              <li><a href="ui-kit.1#">JavaScript</a></li>
+              <li><a href="ui-kit.1#">Demo</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="ui-kit.1#">Customize</a></li>
+      </ul>
+    </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row navbar pretty&quot; id=&quot;nav1&quot;&gt;
+  &lt;!-- Toggle for mobile navigation, targeting the &lt;ul&gt; --&gt;
+  &lt;a class=&quot;toggle&quot; gumby-trigger=&quot;#nav1 > .row &gt; ul&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;icon-menu&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;h1 class=&quot;four columns logo&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+      &lt;img src=&quot;/img/gumby_mainlogo.png&quot; gumby-retina /&gt;
+    &lt;/a&gt;
+  &lt;/h1&gt;
+  &lt;ul class=&quot;eight columns&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;Documentation&lt;/a&gt;
+      &lt;div class=&quot;dropdown&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;The Grid&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;UI Kit&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sass&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Customize&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="tabs">
+            <h2>Tabs</h2>
+            <p>Adding tabs in Gumby Framework is flexible, modular, and easy. Building tabs has never been so easy! Simply add a sectional element and assign it <span class="label light">class="tabs"</span>. Inside of that include a <span class="label light">&lt;ul class="tab-nav"&gt;</span> which contains the fragment urls and titles for your tabs, this will act as your tab's navigation. Your tabs' content should be contained in a <span class="label light">&lt;div&gt;</span>, <span class="label light">&lt;section&gt;</span> or <span class="label light">&lt;articles&gt;</span> outside of the tab navigation, each with <span class="label light">class="tab-content"</span>. Our awesome javascripty magic will handle the rest.</p>
+
+<div class="example-grid">
+<div class="row">
+  <div class="twelve columns">
+    <section class="tabs">
+      <ul class="tab-nav">
+        <li><a href="ui-kit.1#">Tab 1</a></li>
+        <li class="active"><a href="ui-kit.1#">Tab 2</a></li>
+        <li><a href="ui-kit.1#">Tab 3</a></li>
+      </ul>
+      <div class="tab-content">
+        <p>Now the question of the hour is, "Who's got the Pandorica?" Answer: I do. Next question: Who's coming to take it from me? Come on! Look at me! No plan, no back-up, no weapons worth a damn!</p>
+      </div>
+      <div class="tab-content active">
+        <p>Oh, and something else I don't have: Anything to lose! So, if you're sitting up there in your silly, little spaceship with all your silly, little guns, and you've got any plans on taking the Pandorica tonight, just remember who's standing in your way!</p>
+      </div>
+      <div class="tab-content">
+        <p>Remember every black day I ever stopped you and then, and then, do the smart thing: Let somebody else try first.</p>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;twelve columns&quot;&gt;
+    &lt;section class=&quot;tabs&quot;&gt;
+      &lt;ul class=&quot;tab-nav&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;p&gt;Proin elit arcu, rutrum commodo...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tab-content active&quot;&gt;
+        &lt;p&gt;Morbi tincidunt, dui sit amet facilisis feugiat...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;p&gt;Mauris eleifend est et turpis. Duis id erat...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<article class="left-center">
+<h4 class="lead">Pill Tabs</h4>
+<p>Sometimes you want your tabs to look a little different, we've made that an easy feat. You can create beautiful pill shaped tabs simply by adding "pill" to the tab container; ie: <span class="label light">class="pill tabs"</span>. Make sense? Marvelous.</p>
+</article>
+
+<div class="example-grid">
+<div class="row">
+  <div class="twelve columns">
+    <section class="pill tabs">
+      <ul class="tab-nav">
+        <li class="active"><a href="ui-kit.1#">Tab 1</a></li>
+        <li><a href="ui-kit.1#">Tab 2</a></li>
+        <li><a href="ui-kit.1#">Tab 3</a></li>
+      </ul>
+      <div class="tab-content active">
+        <p>Now the question of the hour is, "Who's got the Pandorica?" Answer: I do. Next question: Who's coming to take it from me? Come on! Look at me! No plan, no back-up, no weapons worth a damn!</p>
+      </div>
+      <div class="tab-content">
+        <p>Oh, and something else I don't have: Anything to lose! So, if you're sitting up there in your silly, little spaceship with all your silly, little guns, and you've got any plans on taking the Pandorica tonight, just remember who's standing in your way!</p>
+      </div>
+      <div class="tab-content">
+        <p>Remember every black day I ever stopped you and then, and then, do the smart thing: Let somebody else try first.</p>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;twelve columns&quot;&gt;
+    &lt;section class=&quot;pill tabs&quot;&gt;
+      &lt;ul class=&quot;tab-nav&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class=&quot;tab-content active&quot;&gt;
+        &lt;p&gt;Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;p&gt;Morbi tincidunt, dui sit amet facilisis feugiat...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;p&gt;Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<article class="left-center">
+<h4 class="lead">Vertical Tabs</h4>
+<p>Vertical tabs are the sexy new girl in school. Gumby 2 makes creating vertical tab navigation easy. Implementation is just like pill tabs; simply add <span class="label light">vertical</span> to your tab container class and voila! Vertical tabs!</p>
+</article>
+
+<div class="example-grid">
+<div class="row">
+  <div class="twelve columns">
+    <section class="vertical tabs">
+      <ul class="tab-nav four columns"><li><a href="ui-kit.1#">Tab 1</a></li>
+        <li class="active"><a href="ui-kit.1#">Tab 2</a></li>
+        <li><a href="ui-kit.1#">Tab 3</a></li>
+      </ul>
+      <div class="tab-content eight columns">
+        <p>Now the question of the hour is, "Who's got the Pandorica?" Answer: I do. Next question: Who's coming to take it from me? Come on! Look at me! No plan, no back-up, no weapons worth a damn!</p>
+      </div>
+      <div class="tab-content eight columns active">
+        <p>Oh, and something else I don't have: Anything to lose! So, if you're sitting up there in your silly, little spaceship with all your silly, little guns, and you've got any plans on taking the Pandorica tonight, just remember who's standing in your way!</p>
+      </div>
+      <div class="tab-content eight columns">
+        <p>Remember every black day I ever stopped you and then, and then, do the smart thing: Let somebody else try first.</p>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;twelve columns&quot;&gt;
+    &lt;section class=&quot;vertical tabs&quot;&gt;
+      &lt;ul class=&quot;tab-nav four columns&quot;&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class=&quot;tab-content eight columns&quot;&gt;
+        &lt;p&gt;Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tab-content eight columns active&quot;&gt;
+        &lt;p&gt;Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tab-content eight columns&quot;&gt;
+        &lt;p&gt;Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="skip-links">
+            <h2>Skip Links</h2>
+            <p>Skip links allow you to vertically slide the window to the top of the page, to a px point or to a specific DOM element. There are two classes that can be used to define a skip link, <span class="label light">.skiplink</span> provides predefined styles while <span class="label light">.skip</span> can be used to create unstyled skip links. Either way, add a <span class="label light">gumby-goto</span> attribute containing a valid css selector, a px value or simply ‘top’.</p>
+
+<p>There are three optional attributes you can use to alter the functionality. <span class="label light">gumby-duration</span>, <span class="label light">gumby-easing</span> and <span class="label light">gumby-offset</span>. Skip links use <span class="label light">jQuery.animate</span> and the <span class="label light">gumby-duration</span> and <span class="label light">gumby-easing</span> attributes are fed directly into that method. The duration should be specified in ms and the easing method as a string, any valid jQuery easing method can be used here so include the jQuery easing plugin to get creative! The <span class="label light">gumby-offset</span> attribute can be used in conjunction with the <span class="label light">gumby-goto</span> attribute and should be specified as a +/- integer e.g -10 or +100. This attribute is useful when sliding to elements with padding or margins or perhaps in conjunction with <a href="ui-kit.1#" class="skip" gumby-goto="[data-target='fixed-positions']">Fixed Elements</a>.</p>
+
+<p>Styled skiplinks support the same classes as buttons so get creative!</p>
+
+<div class="example-grid">
+    <p class="skiplink primary pretty"><a href="ui-kit.1#" gumby-goto="[data-target='forms']">Go to forms</a></p>
+    <p class="skiplink secondary pretty"><a href="ui-kit.1#" gumby-goto="[data-target='buttons']">Go to buttons</a></p>
+    <p><a href="ui-kit.1#" class="skip" gumby-easing="easeInOutQuad" gumby-goto="top" gumby-duration="2000">Unstyled skip to top in 2 seconds with custom easing!</a></p>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;p class=&quot;skiplink primary pretty&quot;&gt;&lt;a href=&quot;#&quot; gumby-goto=&quot;#example-forms&quot;&gt;Go to forms&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;skiplink secondary pretty&quot;&gt;&lt;a href=&quot;#&quot; gumby-goto=&quot;#example-btns&quot;&gt;Go to buttons&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- Requires easing plugin --&gt;
+&lt;p&gt;
+  &lt;a href=&quot;#&quot; class=&quot;skip&quot; gumby-easing=&quot;easeInOutQuad&quot; gumby-goto=&quot;top&quot; gumby-duration=&quot;2000&quot;&gt;
+  Unstyled skip to top in 2 seconds with custom easing!&lt;/a&gt;
+&lt;/p&gt;
+</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="toggles-switches">
+            <h2>Toggles &amp; Switches</h2>
+            <p>Toggles and Switches provide a unique method for writing rich front end functionality into your applications without the need to write any JavaScript. We realised that a large amount of JavaScript is written to simply add and remove classes from DOM elements in order to trigger CSS animations. This seems a waste of boilerplate JavaScript code, written over and over again. We set out to improve this and as a result, Toggles and Switches were born.</p>
+
+<p>Both Toggles and Switches work in the same way (and in fact are handled by the same JS UI module) with only one small difference. As the name suggests, Toggles will toggle a class on a set of elements while Switches will add and remove a class only once. As simple as this sounds, complex UI elements with reasonably advanced functionality can be created using Toggles and Switches only.</p>
+
+<p>Each Toggle and Switch requires a <span class="label light">gumby-trigger</span> attribute containing one or two selectors separated by a pipe. A class of <span class="label light">.active</span> will be added to the first selector and removed from the second. Toggles will continuously repeat this interaction, toggling the classes back and forth, whereas a Switch will perform the action only once. Neither of these selectors are actually required, you can simply provide one selector, with no pipe separator, to which the active class will be added, or supply an empty first selector in order to only remove the active class.</p>
+
+<p>Both Toggles and Switches also provide an optional <span class="label light">gumby-on</span> attribute which can be used to set the triggering event. They use the click event by default but you can set it to any number of standard JS events.</p>
+
+<p>Any element can be a Toggle or a Switch, just add the appropriate class.</p>
+
+<p>Read <a href="http://www.digitalsurgeons.com/blog/gumbys-toggles-switches/" target="_blank">Gumby's Toggles &amp; Switches</a> on the <a href="http://www.digitalsurgeons.com/blog/" target="_blank">Digital Surgeons blog</a> for more information.</p>
+<div class="example-grid" id="example-toggles">
+<div class="row">
+  <p class="btn primary five columns">
+    <a href="ui-kit.1#" class="toggle" data-trigger="body">Toggle body color</a>
+  </p>
+  <p class="btn primary seven columns">
+    <a href="ui-kit.1#" class="switch" data-trigger="|#sidebar-nav li">Switch off active sidebar item</a>
+  </p>
+</div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;!-- toggle .active on #something on click --&gt;
+&lt;a href=&quot;#&quot; class=&quot;toggle&quot; gumby-trigger=&quot;#something&quot;&gt;Toggle&lt;/a&gt;
+
+&lt;!-- toggle .active on #something and remove from .somethingelse and vice versa --&gt;
+&lt;a href=&quot;#&quot; class=&quot;toggle&quot; gumby-trigger=&quot;#something | .somethingelse&quot;&gt;Toggle&lt;/a&gt;
+
+&lt;!-- add .active to #something and remove from .somethingelse --&gt;
+&lt;a href=&quot;#&quot; class=&quot;switch&quot; gumby-trigger=&quot;#something | .somethingelse&quot;&gt;Switch&lt;/a&gt;
+
+&lt;!-- remove .active from .somethingelse --&gt;
+&lt;a href=&quot;#&quot; class=&quot;switch&quot; gumby-trigger=&quot; | .somethingelse&quot;&gt;Switch&lt;/a&gt;
+
+&lt;!-- toggle .active on .selector and remove from .another and vice versa --&gt;
+&lt;!-- onmouseover and onmouseout will trigger the interaction  --&gt;
+&lt;a href=&quot;#&quot; class=&quot;toggle&quot; gumby-trigger=&quot;.selector | .another&quot; gumby-on=&quot;mouseover mouseout&quot;&gt;Toggle&lt;/a&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="drawers">
+            <h2>Drawers</h2>
+            <p>Gumby 2 comes with styles to assist you in creating awesome drawers using toggles or switches. The <span class="label light">.drawer</span> class sets some predefined styling as well as a 0px max height and .3s transition while the <span class="label light">.drawer.active</span> class sets an 800px max height, causing the drawer to slide open. Trigger with a toggle or switch like so.</p>
+
+<div class="example-grid">
+    <p class="btn medium primary">
+      <a href="ui-kit.1#"  class="switch" gumby-trigger="#drawer1">Open Top Drawer</a>
+    </p>
+    <p class="btn medium primary">
+      <a href="ui-kit.1#"  class="toggle" gumby-trigger="#drawer2|#drawer3">Toggle Bottom Drawers</a>
+    </p>
+    <p class="btn medium primary">
+      <a href="ui-kit.1#"  class="switch" gumby-trigger="|.drawer">Close All Drawers</a>
+    </p>
+    <div class="row">
+      <div class="fourteen columns">
+        <div class="drawer" id="drawer1">
+          <h2><a href="http://www.digitalsurgeons.com">Digital Surgeons</a></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="seven columns">
+        <div class="drawer" id="drawer2">
+          <h2><a href="http://www.digitalsurgeons.com">Digital Surgeons</a></h2>
+        </div>
+      </div>
+      <div class="seven columns">
+        <div class="drawer" id="drawer3">
+          <h2><a href="http://www.digitalsurgeons.com">Digital Surgeons</a></h2>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;p class=&quot;btn medium primary&quot;&gt;
+  &lt;a href=&quot;#&quot;  class=&quot;switch&quot; gumby-trigger=&quot;#drawer1&quot;&gt;Open Top Drawer&lt;/a&gt;
+&lt;/p&gt;
+&lt;p class=&quot;btn medium primary&quot;&gt;
+  &lt;a href=&quot;#&quot;  class=&quot;toggle&quot; gumby-trigger=&quot;#drawer2|#drawer3&quot;&gt;Toggle Bottom Drawers&lt;/a&gt;
+&lt;/p&gt;
+&lt;p class=&quot;btn medium primary&quot;&gt;
+  &lt;a href=&quot;#&quot;  class=&quot;switch&quot; gumby-trigger=&quot;|.drawer&quot;&gt;Close All Drawers&lt;/a&gt;
+&lt;/p&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;fourteen columns&quot;&gt;
+    &lt;div class=&quot;drawer&quot; id=&quot;drawer1&quot;&gt;
+      &lt;h2&gt;&lt;a href=&quot;http://www.digitalsurgeons.com&quot;&gt;Digital Surgeons&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;seven columns&quot;&gt;
+    &lt;div class=&quot;drawer&quot; id=&quot;drawer2&quot;&gt;
+      &lt;h2&gt;&lt;a href=&quot;http://www.digitalsurgeons.com&quot;&gt;Digital Surgeons&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;seven columns&quot;&gt;
+    &lt;div class=&quot;drawer&quot; id=&quot;drawer3&quot;&gt;
+      &lt;h2&gt;&lt;a href=&quot;http://www.digitalsurgeons.com&quot;&gt;Digital Surgeons&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="intrinsic-ratio-video-embed">
+            <h2>Intrinsic Ratio Video Embed</h2>
+            <p>Your coding hand is way strong. Keep the aspect ratio of your video embeds in line by adding <span class="label light">class="video"</span> to your video's container. If you're not embedding a plain ole' mp4, and prefer to use a service like YouTube, we've included a special class for YouTube embeds! Try it out by adding <span class="label light">class="youtube video"</span> to your video's container. This class compensates for the height of their video transport, targets the iframe that YouTube adds to your site, and harmonizes all of it with your video's aspect ratio — on every screen.</p>
+
+<h3>Supported Video Types</h3>
+<ul class="disc">
+  <li>YouTube (.youtube)</li>
+  <li>Vimeo (.vimeo)</li>
+  <li>Twitch.tv (.twitch)</li>
+</ul>
+
+<div class="example-grid">
+  <div class="row">
+     <div class="seven columns">
+      <article class="youtube video">
+      <iframe width="460" height="315" src="http://www.youtube.com/embed/ebYN0chFJp8" frameborder="0" allowfullscreen></iframe>
+    </article>
+  </div>
+  <div class="seven columns">
+    <article class="vimeo video">
+      <iframe src="http://player.vimeo.com/video/54561300" width="460" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </article>
+  </div>
+</div>
+</div>
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;seven columns&quot;&gt;
+    &lt;article class=&quot;youtube video&quot;&gt;
+      &lt;iframe width=&quot;460&quot;
+                 height=&quot;315&quot;
+                 src=&quot;http://www.youtube.com/embed/ebYN0chFJp8&quot;
+                 frameborder=&quot;0&quot;
+                 allowfullscreen&gt;
+      &lt;/iframe&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;seven columns&quot;&gt;
+    &lt;article class=&quot;vimeo video&quot;&gt;
+      &lt;iframe width=&quot;460&quot;
+                 height=&quot;315&quot;
+                 src=&quot;http://player.vimeo.com/video/54561300&quot;
+                 frameborder=&quot;0&quot;
+                 webkitAllowFullScreen
+                 mozallowfullscreen
+                 allowFullScreen&gt;
+      &lt;/iframe&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="vertical-alignment">
+            <h2>Vertical Alignment</h2>
+            <p> Vertically align images and text, simply.</p>
+
+<div class="example-grid">
+    <div class="row">
+      <section class="fourteen columns">
+        <article class="valign row">
+          <div>
+            <img src="../img/img_silence_demo.jpg" width="145" />
+          </div>
+          <div>
+            <h4>Gumby Framework is cool.</h4>
+            <p>Face tattoos are not.</p>
+          </div>
+        </article>
+        <article class="valign row">
+          <div>
+            <img src="../img/img_silence_demo.jpg" width="145" />
+          </div>
+          <div>
+            <h4>Gumby Framework is cool.</h4>
+            <p>And not too mainstream.</p>
+          </div>
+        </article>
+      </section>
+    </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;section class=&quot;fourteen columns&quot;&gt;
+    &lt;article class=&quot;valign row&quot;&gt;
+      &lt;div&gt;
+        &lt;img src=&quot;/img/img_silence_demo.jpg&quot; width=&quot;145&quot; /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h4&gt;Gumby Framework is cool.&lt;/h4&gt;
+        &lt;p&gt;Face tattoos are not.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;valign row&quot;&gt;
+      &lt;div&gt;
+        &lt;img src=&quot;/img/img_silence_demo.jpg&quot; width=&quot;145&quot; /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h4&gt;Gumby Framework is cool.&lt;/h4&gt;
+        &lt;p&gt;and not too mainstream.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="fixed-positions">
+            <h2>Fixed Positions</h2>
+            <p>The <span class="label light">gumby-fixed</span> attribute can be applied to any element in order to fix it to the screen and release again at certain points. The fixed value can be specified as px value, a css selector or the string 'top'. If a selector is specified, a class of <span class="label light">.fixed</span> will be toggled on the element when the result of the selector reaches the top of the window. If 'top' is specified then the <span class="label light">.fixed</span> class will be toggled as the element itself reaches the top of the window and if a px value is specified the <span class="label light">.fixed</span> class will be toggled when the window scroll offset reaches that value. All offset calculations are made relative to the window, unless another css selector is specified in <span class="label light">gumby-holder</span>.</p>
+
+<p>An 'unfix' point can be specified by splitting two values with a pipe in the <span class="label light">gumby-fixed</span> attribute. All the same value types are supported and when the value is reached the <span class="label light">.fixed</span> class will be removed.</p>
+
+<p>As fixed elements are relative to the window, the appearance of your beautiful elements may be altered as the <span class="label light">.fixed</span> class is toggled. Extend this class in your CSS to account for appearance changes.</p>
+
+<div class="example-grid">
+<p class="alert default row"><i class="icon icon-eye"></i> Check out our documentation sidebar, we're using Fixed Elements.</p>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;!-- will be fixed as it reaches top of window --&gt;
+&lt;div gumby-fixed=&quot;top&quot;&gt;Fix me&lt;/div&gt;
+
+&lt;!-- will be fixed at 250px scroll offset and unfixed when #some-element is reached --&gt;
+&lt;div gumby-fixed=&quot;250|#some-element&quot;&gt;Fix me&lt;/div&gt;
+
+&lt;!-- will be fixed at 250px scroll offset within the specified custom holder --&gt;
+&lt;div gumby-fixed=&quot;250&quot; gumby-holder=&quot;#parent&quot;&gt;Fix me&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="responsive-images">
+            <h2>Responsive Images</h2>
+            <p>New in Gumby 2 is something we call "pretty pictures" internally. What they are is a set of classes that you can apply to quickly give the images on your site a fashion makeover. Quickly create circular profile photos, give photos rounded edges, a basic white frame, or a polaroid look. To sexify your images, simply use <span class="label light">class="[shape] image"</span>. Available shapes are <span class="label light">circle</span>, <span class="label light">rounded</span>, <span class="label light">photo</span>, and <span class="label light">polaroid</span>.</p>
+
+<div class="example-grid">
+<div class="row">
+    <div class="five columns image circle">
+      <img src="../img/img_silence_demo.jpg"/>
+    </div>
+    <div class="three columns image circle">
+      <img src="../img/img_silence_demo.jpg"/>
+    </div>
+    <div class="two columns image circle">
+      <img src="../img/img_silence_demo.jpg"/>
+    </div>
+    <div class="one columns image circle">
+      <img src="../img/img_silence_demo.jpg"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="four columns image rounded">
+      <img src="../img/img_silence_demo.jpg"/>
+    </div>
+    <div class="four columns image photo">
+      <img src="../img/img_silence_demo.jpg"/>
+    </div>
+    <div class="four columns image polaroid photo">
+      <img src="../img/img_silence_demo.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;five columns image circle&quot;&gt;
+    &lt;img src=&quot;/img/img_silence_demo.jpg&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;two columns image circle&quot;&gt;
+    &lt;img src=&quot;/img/img_silence_demo.jpg&quot;/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;four columns image rounded&quot;&gt;
+    &lt;img src=&quot;/img/img_silence_demo.jpg&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;four columns image photo&quot;&gt;
+    &lt;img src=&quot;/img/img_silence_demo.jpg&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;four columns image polaroid photo&quot;&gt;
+    &lt;img src=&quot;/img/img_silence_demo.jpg&quot;/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="retina-images">
+            <h2>Retina Images</h2>
+            <p>Since Apple introduced the retina display we’ve had to change the way we design and build for the web, serving up responsive images for different device resolutions. Gumby 2 makes this easy for you. If you include a high resolution image in the same directory as your regular image with the suffix @2x, applying the attribute <span class="label light">gumby-retina</span> to your <span class="label light">&lt;img&gt;</span> will ensure the higher resolution image is served up on retina displays.</p>
+
+<div class="example-grid" id="example-retina">
+    <p class="alert default row"><i class="icon icon-eye"></i> Check this image src on a retina display. </p>
+    <div class="row">
+      <div class="seven columns">
+        <img src="../img/gumby_mainlogo.png" />
+      </div>
+      <div class="seven columns">
+        <img src="../img/gumby_mainlogo.png" gumby-retina />
+      </div>
+    </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;img src="/img/gumby_mainlogo.png" gumby-retina /&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="icons">
+            <h2>Icons</h2>
+            <p>Gumby 2 has an awesome set of icons for you to use in your web projects. We’ve completely integrated <a href="http://www.entypo.com/">entypo icons</a> into the Gumby Framework. In Gumby 2, you have access to over 260 beautiful icons. Adding them is as simple as attaching a class to an element.</p>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+&lt;i class="icon-note"&gt;&lt;/i&gt;
+&lt;i class="icon-heart"&gt;&lt;/i&gt;
+&lt;i class="icon-flag"&gt;&lt;/i&gt;
+&lt;i class="icon-github"&gt;&lt;/i&gt;</pre>
+</div>
+
+<div class="example-grid">
+<ul class="row">
+  <li class="two columns"><i class="icon-note"></i></li>
+  <li class="two columns"><i class="icon-note-beamed"></i></li>
+  <li class="two columns"><i class="icon-music"></i></li>
+  <li class="two columns"><i class="icon-search"></i></li>
+  <li class="two columns"><i class="icon-flashlight"></i></li>
+  <li class="two columns"><i class="icon-mail"></i></li>
+  <li class="two columns"><i class="icon-heart"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-heart-empty"></i></li>
+  <li class="two columns"><i class="icon-star"></i></li>
+  <li class="two columns"><i class="icon-star-empty"></i></li>
+  <li class="two columns"><i class="icon-user"></i></li>
+  <li class="two columns"><i class="icon-users"></i></li>
+  <li class="two columns"><i class="icon-user-add"></i></li>
+  <li class="two columns"><i class="icon-video"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-check"></i></li>
+  <li class="two columns"><i class="icon-cancel"></i></li>
+  <li class="two columns"><i class="icon-cancel-circled"></i></li>
+  <li class="two columns"><i class="icon-picture"></i></li>
+  <li class="two columns"><i class="icon-camera"></i></li>
+  <li class="two columns"><i class="icon-layout"></i></li>
+  <li class="two columns"><i class="icon-menu"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-plus-squared"></i></li>
+  <li class="two columns"><i class="icon-minus"></i></li>
+  <li class="two columns"><i class="icon-minus-circled"></i></li>
+  <li class="two columns"><i class="icon-minus-squared"></i></li>
+  <li class="two columns"><i class="icon-cancel-squared"></i></li>
+  <li class="two columns"><i class="icon-plus"></i></li>
+  <li class="two columns"><i class="icon-plus-circled"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-info"></i></li>
+  <li class="two columns"><i class="icon-info-circled"></i></li>
+  <li class="two columns"><i class="icon-back"></i></li>
+  <li class="two columns"><i class="icon-home"></i></li>
+  <li class="two columns"><i class="icon-link"></i></li>
+  <li class="two columns"><i class="icon-help"></i></li>
+  <li class="two columns"><i class="icon-help-circled"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-attach"></i></li>
+  <li class="two columns"><i class="icon-lock"></i></li>
+  <li class="two columns"><i class="icon-lock-open"></i></li>
+  <li class="two columns"><i class="icon-eye"></i></li>
+  <li class="two columns"><i class="icon-tag"></i></li>
+  <li class="two columns"><i class="icon-bookmark"></i></li>
+  <li class="two columns"><i class="icon-bookmarks"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-flag"></i></li>
+  <li class="two columns"><i class="icon-thumbs-up"></i></li>
+  <li class="two columns"><i class="icon-thumbs-down"></i></li>
+  <li class="two columns"><i class="icon-download"></i></li>
+  <li class="two columns"><i class="icon-upload"></i></li>
+  <li class="two columns"><i class="icon-upload-cloud"></i></li>
+  <li class="two columns"><i class="icon-reply"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-reply-all"></i></li>
+  <li class="two columns"><i class="icon-forward"></i></li>
+  <li class="two columns"><i class="icon-quote"></i></li>
+  <li class="two columns"><i class="icon-code"></i></li>
+  <li class="two columns"><i class="icon-export"></i></li>
+  <li class="two columns"><i class="icon-pencil"></i></li>
+  <li class="two columns"><i class="icon-feather"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-print"></i></li>
+  <li class="two columns"><i class="icon-retweet"></i></li>
+  <li class="two columns"><i class="icon-keyboard"></i></li>
+  <li class="two columns"><i class="icon-comment"></i></li>
+  <li class="two columns"><i class="icon-alert"></i></li>
+  <li class="two columns"><i class="icon-vcard"></i></li>
+  <li class="two columns"><i class="icon-address"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-chat"></i></li>
+  <li class="two columns"><i class="icon-bell"></i></li>
+  <li class="two columns"><i class="icon-attention"></i></li>
+  <li class="two columns"><i class="icon-location"></i></li>
+  <li class="two columns"><i class="icon-map"></i></li>
+  <li class="two columns"><i class="icon-direction"></i></li>
+  <li class="two columns"><i class="icon-compass"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-cup"></i></li>
+  <li class="two columns"><i class="icon-trash"></i></li>
+  <li class="two columns"><i class="icon-doc"></i></li>
+  <li class="two columns"><i class="icon-docs"></i></li>
+  <li class="two columns"><i class="icon-doc-landscape"></i></li>
+  <li class="two columns"><i class="icon-doc-text"></i></li>
+  <li class="two columns"><i class="icon-doc-text-inv"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-newspaper"></i></li>
+  <li class="two columns"><i class="icon-book"></i></li>
+  <li class="two columns"><i class="icon-book-open"></i></li>
+  <li class="two columns"><i class="icon-folder"></i></li>
+  <li class="two columns"><i class="icon-archive"></i></li>
+  <li class="two columns"><i class="icon-box"></i></li>
+  <li class="two columns"><i class="icon-rss"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-phone"></i></li>
+  <li class="two columns"><i class="icon-cog"></i></li>
+  <li class="two columns"><i class="icon-tools"></i></li>
+  <li class="two columns"><i class="icon-share"></i></li>
+  <li class="two columns"><i class="icon-shareable"></i></li>
+  <li class="two columns"><i class="icon-basket"></i></li>
+  <li class="two columns"><i class="icon-bag"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-calendar"></i></li>
+  <li class="two columns"><i class="icon-login"></i></li>
+  <li class="two columns"><i class="icon-logout"></i></li>
+  <li class="two columns"><i class="icon-mic"></i></li>
+  <li class="two columns"><i class="icon-mute"></i></li>
+  <li class="two columns"><i class="icon-sound"></i></li>
+  <li class="two columns"><i class="icon-volume"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-clock"></i></li>
+  <li class="two columns"><i class="icon-hourglass"></i></li>
+  <li class="two columns"><i class="icon-lamp"></i></li>
+  <li class="two columns"><i class="icon-light-down"></i></li>
+  <li class="two columns"><i class="icon-light-up"></i></li>
+  <li class="two columns"><i class="icon-adjust"></i></li>
+  <li class="two columns"><i class="icon-block"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-resize-full"></i></li>
+  <li class="two columns"><i class="icon-resize-small"></i></li>
+  <li class="two columns"><i class="icon-popup"></i></li>
+  <li class="two columns"><i class="icon-publish"></i></li>
+  <li class="two columns"><i class="icon-window"></i></li>
+  <li class="two columns"><i class="icon-arrow-combo"></i></li>
+  <li class="two columns"><i class="icon-down-circled"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-left-circled"></i></li>
+  <li class="two columns"><i class="icon-right-circled"></i></li>
+  <li class="two columns"><i class="icon-up-circled"></i></li>
+  <li class="two columns"><i class="icon-up-open"></i></li>
+  <li class="two columns"><i class="icon-down-open"></i></li>
+  <li class="two columns"><i class="icon-left-open"></i></li>
+  <li class="two columns"><i class="icon-right-open"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-up-open-mini"></i></li>
+  <li class="two columns"><i class="icon-down-open-mini"></i></li>
+  <li class="two columns"><i class="icon-left-open-mini"></i></li>
+  <li class="two columns"><i class="icon-right-open-mini"></i></li>
+  <li class="two columns"><i class="icon-up-open-big"></i></li>
+  <li class="two columns"><i class="icon-down-open-big"></i></li>
+  <li class="two columns"><i class="icon-left-open-big"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-right-open-big"></i></li>
+  <li class="two columns"><i class="icon-down"></i></li>
+  <li class="two columns"><i class="icon-arrow-left"></i></li>
+  <li class="two columns"><i class="icon-arrow-right"></i></li>
+  <li class="two columns"><i class="icon-up"></i></li>
+  <li class="two columns"><i class="icon-up-dir"></i></li>
+  <li class="two columns"><i class="icon-down-dir"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-left-dir"></i></li>
+  <li class="two columns"><i class="icon-right-dir"></i></li>
+  <li class="two columns"><i class="icon-up-bold"></i></li>
+  <li class="two columns"><i class="icon-down-bold"></i></li>
+  <li class="two columns"><i class="icon-left-bold"></i></li>
+  <li class="two columns"><i class="icon-right-bold"></i></li>
+  <li class="two columns"><i class="icon-up-thin"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-down-thin"></i></li>
+  <li class="two columns"><i class="icon-left-thin"></i></li>
+  <li class="two columns"><i class="icon-right-thin"></i></li>
+  <li class="two columns"><i class="icon-ccw"></i></li>
+  <li class="two columns"><i class="icon-cw"></i></li>
+  <li class="two columns"><i class="icon-arrows-ccw"></i></li>
+  <li class="two columns"><i class="icon-level-down"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-level-up"></i></li>
+  <li class="two columns"><i class="icon-shuffle"></i></li>
+  <li class="two columns"><i class="icon-loop"></i></li>
+  <li class="two columns"><i class="icon-switch"></i></li>
+  <li class="two columns"><i class="icon-play"></i></li>
+  <li class="two columns"><i class="icon-stop"></i></li>
+  <li class="two columns"><i class="icon-pause"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-record"></i></li>
+  <li class="two columns"><i class="icon-to-end"></i></li>
+  <li class="two columns"><i class="icon-to-start"></i></li>
+  <li class="two columns"><i class="icon-fast-forward"></i></li>
+  <li class="two columns"><i class="icon-fast-backward"></i></li>
+  <li class="two columns"><i class="icon-progress-0"></i></li>
+  <li class="two columns"><i class="icon-progress-1"></i></li>
+</ul>
+
+<ul class="row">
+  <li class="two columns"><i class="icon-progress-2"></i></li>
+  <li class="two columns"><i class="icon-progress-3"></i></li>
+  <li class="two columns"><i class="icon-target"></i></li>
+  <li class="two columns"><i class="icon-palette"></i></li>
+  <li class="two columns"><i class="icon-list"></i></li>
+  <li class="two columns"><i class="icon-list-add"></i></li>
+  <li class="two columns"><i class="icon-signal"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-trophy"></i></li>
+  <li class="two columns"><i class="icon-battery"></i></li>
+  <li class="two columns"><i class="icon-back-in-time"></i></li>
+  <li class="two columns"><i class="icon-monitor"></i></li>
+  <li class="two columns"><i class="icon-mobile"></i></li>
+  <li class="two columns"><i class="icon-network"></i></li>
+  <li class="two columns"><i class="icon-cd"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-inbox"></i></li>
+  <li class="two columns"><i class="icon-install"></i></li>
+  <li class="two columns"><i class="icon-globe"></i></li>
+  <li class="two columns"><i class="icon-cloud"></i></li>
+  <li class="two columns"><i class="icon-cloud-thunder"></i></li>
+  <li class="two columns"><i class="icon-flash"></i></li>
+  <li class="two columns"><i class="icon-moon"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-mouse"></i></li>
+  <li class="two columns"><i class="icon-briefcase"></i></li>
+  <li class="two columns"><i class="icon-suitcase"></i></li>
+  <li class="two columns"><i class="icon-flight"></i></li>
+  <li class="two columns"><i class="icon-paper-plane"></i></li>
+  <li class="two columns"><i class="icon-leaf"></i></li>
+  <li class="two columns"><i class="icon-lifebuoy"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-dot"></i></li>
+  <li class="two columns"><i class="icon-dot-2"></i></li>
+  <li class="two columns"><i class="icon-dot-3"></i></li>
+  <li class="two columns"><i class="icon-brush"></i></li>
+  <li class="two columns"><i class="icon-magnet"></i></li>
+  <li class="two columns"><i class="icon-infinity"></i></li>
+  <li class="two columns"><i class="icon-erase"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-chart-pie"></i></li>
+  <li class="two columns"><i class="icon-chart-line"></i></li>
+  <li class="two columns"><i class="icon-chart-bar"></i></li>
+  <li class="two columns"><i class="icon-chart-area"></i></li>
+  <li class="two columns"><i class="icon-tape"></i></li>
+  <li class="two columns"><i class="icon-graduation-cap"></i></li>
+  <li class="two columns"><i class="icon-language"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-ticket"></i></li>
+  <li class="two columns"><i class="icon-water"></i></li>
+  <li class="two columns"><i class="icon-droplet"></i></li>
+  <li class="two columns"><i class="icon-air"></i></li>
+  <li class="two columns"><i class="icon-credit-card"></i></li>
+  <li class="two columns"><i class="icon-floppy"></i></li>
+  <li class="two columns"><i class="icon-clipboard"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-megaphone"></i></li>
+  <li class="two columns"><i class="icon-database"></i></li>
+  <li class="two columns"><i class="icon-drive"></i></li>
+  <li class="two columns"><i class="icon-bucket"></i></li>
+  <li class="two columns"><i class="icon-thermometer"></i></li>
+  <li class="two columns"><i class="icon-key"></i></li>
+  <li class="two columns"><i class="icon-flow-cascade"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-flow-branch"></i></li>
+  <li class="two columns"><i class="icon-flow-tree"></i></li>
+  <li class="two columns"><i class="icon-flow-line"></i></li>
+  <li class="two columns"><i class="icon-flow-parallel"></i></li>
+  <li class="two columns"><i class="icon-rocket"></i></li>
+  <li class="two columns"><i class="icon-gauge"></i></li>
+  <li class="two columns"><i class="icon-traffic-cone"></i></li>
+</ul>
+
+<ul class="row">
+  <li class="two columns"><i class="icon-cc"></i></li>
+  <li class="two columns"><i class="icon-cc-by"></i></li>
+  <li class="two columns"><i class="icon-cc-nc"></i></li>
+  <li class="two columns"><i class="icon-cc-nc-eu"></i></li>
+  <li class="two columns"><i class="icon-cc-nc-jp"></i></li>
+  <li class="two columns"><i class="icon-cc-sa"></i></li>
+  <li class="two columns"><i class="icon-cc-nd"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-cc-pd"></i></li>
+  <li class="two columns"><i class="icon-cc-zero"></i></li>
+  <li class="two columns"><i class="icon-cc-share"></i></li>
+  <li class="two columns"><i class="icon-cc-remix"></i></li>
+  <li class="two columns"><i class="icon-github"></i></li>
+  <li class="two columns"><i class="icon-github-circled"></i></li>
+  <li class="two columns"><i class="icon-flickr"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-flickr-circled"></i></li>
+  <li class="two columns"><i class="icon-vimeo"></i></li>
+  <li class="two columns"><i class="icon-vimeo-circled"></i></li>
+  <li class="two columns"><i class="icon-gplus"></i></li>
+  <li class="two columns"><i class="icon-gplus-circled"></i></li>
+  <li class="two columns"><i class="icon-pinterest"></i></li>
+  <li class="two columns"><i class="icon-pinterest-circled"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-tumblr"></i></li>
+  <li class="two columns"><i class="icon-tumblr-circled"></i></li>
+  <li class="two columns"><i class="icon-linkedin"></i></li>
+  <li class="two columns"><i class="icon-linkedin-circled"></i></li>
+  <li class="two columns"><i class="icon-dribbble"></i></li>
+  <li class="two columns"><i class="icon-dribbble-circled"></i></li>
+  <li class="two columns"><i class="icon-facebook"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-facebook-circled"></i></li>
+  <li class="two columns"><i class="icon-facebook-squared"></i></li>
+  <li class="two columns"><i class="icon-twitter"></i></li>
+  <li class="two columns"><i class="icon-twitter-circled"></i></li>
+  <li class="two columns"><i class="icon-lastfm"></i></li>
+  <li class="two columns"><i class="icon-lastfm-circled"></i></li>
+  <li class="two columns"><i class="icon-rdio"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-rdio-circled"></i></li>
+  <li class="two columns"><i class="icon-spotify"></i></li>
+  <li class="two columns"><i class="icon-spotify-circled"></i></li>
+  <li class="two columns"><i class="icon-instagram"></i></li>
+  <li class="two columns"><i class="icon-qq"></i></li>
+  <li class="two columns"><i class="icon-dropbox"></i></li>
+  <li class="two columns"><i class="icon-evernote"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-skype"></i></li>
+  <li class="two columns"><i class="icon-skype-circled"></i></li>
+  <li class="two columns"><i class="icon-flattr"></i></li>
+  <li class="two columns"><i class="icon-renren"></i></li>
+  <li class="two columns"><i class="icon-sina-weibo"></i></li>
+  <li class="two columns"><i class="icon-paypal"></i></li>
+  <li class="two columns"><i class="icon-picasa"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-soundcloud"></i></li>
+  <li class="two columns"><i class="icon-mixi"></i></li>
+  <li class="two columns"><i class="icon-behance"></i></li>
+  <li class="two columns"><i class="icon-google-circles"></i></li>
+  <li class="two columns"><i class="icon-vkontakte"></i></li>
+  <li class="two columns"><i class="icon-smashing"></i></li>
+  <li class="two columns"><i class="icon-sweden"></i></li>
+</ul>
+<ul class="row">
+  <li class="two columns"><i class="icon-db-shape"></i></li>
+  <li class="two columns"><i class="icon-logo-db"></i></li>
+</ul>
+</div>
+          </div>
+
+          
+        </section>
+      </div>
+    </div>
+  <div class="container shaded" id="subfoot">
+  	<section class="row">
+      <div class="eleven columns centered">
+        <div class="row">
+      		<article class="six columns">
+      			<h3 class="action">You simply <b class="embolden">have</b> to try it.</h3>
+          </article>
+          <div class="eight columns dl_and_docs">
+            <div class="medium metro rounded btn download primary"><a href="http://gumbyframework.com/customize">Download Gumby 2</a></div>
+            
+            <div class="medium metro rounded btn dark"><a href="http://gumbyframework.com/docs">Read the Documentation</a></div>
+      		</div>
+        </div>
+      </div>
+  	</section>
+  </div>
+
+  <div class="container">
+  	<footer class="row" id="credits">
+  		<div class="seven columns left-center">
+  			<p>Developed <span>with love</span> by your friends at <a href="http://www.digitalsurgeons.com/" target="_blank" title="Digital Marketing Agency">Digital Surgeons</a></p>
+  			<p class="disclaimer">Disclaimer: Gumby Framework holds no affiliation or association with our friends at www.gumbyworld.com, Primavision Inc. or Prema Toy Inc.</p>
+  		</div>
+  		<div class="seven columns">
+  			<div class="row">
+  				<ul class="socbtns">
+            <li><div class="btn primary"><a target="_blank" href="https://github.com/GumbyFramework/Gumby">Github</a></div></li>
+    				<li><div class="btn twitter"><a target="_blank" href="http://twitter.com/home?status=Check%20out%20the%20new%20Gumby%20Framework%202!%20http%3A%2F%2Fgumbyframework.com%20%0A%0Avia%20%40gumbycss%20%0A%23responsive%20%23sass%20%23rwd">Twitter</a></div></li>
+    				<li><div class="btn facebook"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.gumbyframework.com">Facebook</a></div></li>
+    				<li><div class="btn danger"><a target="_blank" href="https://plus.google.com/share?url=http://gumbyframework.com">Google+</a></div></li>
+          </ul>
+  			</div>
+  		</div>
+  	</footer>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+
+  <script src="../components/gumby/js/libs/gumby.min.js"></script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/build/global.min.js"></script>
+  
+  <script src="../js/build/docs.min.js?v=061213"></script>
+  
+  <script src="../js/build/events.min.js"></script>
+  
+  <script src="../js/libs/google-code-prettify/prettify.js"></script>
+  
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31797645-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+  <!-- Bugherd -->
+  <script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=k2wxp1tsv91hmgwvxauxga';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
+  <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"rpm-images.newrelic.com/42/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-4.newrelic.com","748b9a1a27","2063682","ZAYEbENSCENQUkNcDF1MJ1tFWgleHnRyGgpdBwNA",0,139,new Date().getTime(),"","","","",""]);</script>
+</body>
+</html>
+

@@ -1,0 +1,740 @@
+
+
+
+  
+
+
+
+
+
+  
+
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> 	<html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<title>JavaScript UI Kit | Gumby Framework</title>
+    <meta name="description" content="Gumby Framework JavaScript brings the UI kit to life, with the option to extend each module to suit your needs" />
+    <meta name="author" content="/humans.txt">
+
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon" />
+
+    <meta name="google-site-verification" content="TTuqn2YYupgiGLoJebl_q8v1FUvs9VZW08BuZ7aiGuY" />
+
+    <!--Facebook Metadata /-->
+  	<meta property="og:url" content="http://gumbyframework.com/docs/javascript" />
+    <meta property="og:image" content="http://gumbyframework.com/facebook.jpg?gumby2" />
+  	<meta property="og:description" content="Gumby Framework JavaScript brings the UI kit to life, with the option to extend each module to suit your needs"/>
+  	<meta property="og:title" content="JavaScript UI Kit | Gumby Framework"/>
+
+    <!--Google+ Metadata /-->
+    <meta itemprop="url" content="http://gumbyframework.com/docs/javascript" />
+  	<meta itemprop="name" content="JavaScript UI Kit | Gumby Framework">
+  	<meta itemprop="description" content="Gumby Framework JavaScript brings the UI kit to life, with the option to extend each module to suit your needs">
+  	<meta itemprop="image" content="http://gumbyframework.com/facebook.jpg?gumby2">
+
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="../../css/gumby.css">
+    <link rel="stylesheet" href="../../js/libs/google-code-prettify/prettify.css">
+
+    <script src="../../components/gumby/js/libs/modernizr-2.6.2.min.js"></script>
+  </head>
+
+  <body onload="prettyPrint()" class="docs js" id="inner-doc">
+    <nav id="navbar-main-nav" class="navbar">
+  <div class="row">
+    <a class="toggle" gumby-trigger="#navbar-main-nav #main-nav" href="index.html#"><i class="icon-menu"></i></a>
+    <h1 class="four columns logo">
+      <a href="http://gumbyframework.com/">
+        <img src="../../img/gumby_mainlogo.png" gumby-retina>
+      </a>
+    </h1>
+    <nav class="ten columns pull_right">
+      <ul id="main-nav">
+        <li><a href="index.html#">Features</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="http://gumbyframework.com/features">The Grid</a></li>
+              <li><a href="http://gumbyframework.com/features/prototype">Rapid Prototyping</a></li>
+              <li><a href="http://gumbyframework.com/features/sass">Sass</a></li>
+              <li><a href="http://gumbyframework.com/features/mobile">Mobile</a></li>
+              <li><a href="http://gumbyframework.com/showcase">Showcase</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="index.html#">Documentation</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="../index.html">Getting Started</a></li>
+              <li><a href="../grid/index.html">The Grid</a></li>
+              <li><a href="../ui-kit/index.html">UI Kit</a></li>
+              <li><a href="../sass/index.html">Sass</a></li>
+              <li><a href="index.html">JavaScript</a></li>
+              <li><a href="http://gumbyframework.com/demo">Demo</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="http://gumbyframework.com/customize">Customize</a></li>
+        <li><a href="https://plus.google.com/communities/108760896951473344451" target="_blank">Community</a></li>
+        <li>
+          <p class="medium pretty default btn icon-github icon-left">
+            <a href="https://github.com/GumbyFramework/Gumby"> GitHub</a>
+          </p>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+
+    <div class="container shaded">
+      <div id="inner-nav" class="row">
+        <h2 class="three columns left-center">JavaScript</h2>
+        <ul class="six columns pull_right">
+          <li>
+            <div class="medium metro rounded btn"><a href="../grid/index.html">The Grid</a></div>
+          </li>
+          <li>
+            <div class="medium metro rounded btn"><a href="../ui-kit/index.html">UI Kit</a></div>
+          </li>
+          <li>
+            <div class="medium metro rounded btn"><a href="../sass/index.html">Sass</a></div>
+          </li>
+          <li>
+            <div class="medium metro rounded btn active"><a href="index.html">JavaScript</a></div>
+          </li>
+          <li>
+            <div class="medium metro rounded btn"><a href="http://gumbyframework.com/demo">Demo</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container nopad">
+      <div class="row">
+        <section class="four columns">
+          <nav id="sidebar-nav-holder" class="vertical-nav" gumby-fixed="top|[data-target='gumby-helpers']">
+            <ul id="sidebar-nav">
+              
+                <li class="active">
+                  <a href="index.html#installation" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='installation']">Installation</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#overview" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='overview']">Overview</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#touch-events" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='touch-events']">Touch Events</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#checkboxes" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='checkboxes']">Checkboxes</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#radio-buttons" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='radio-buttons']">Radio Buttons</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#tabs" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='tabs']">Tabs</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#fixed-positions" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='fixed-positions']">Fixed Positions</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#skip-links" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='skip-links']">Skip Links</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#toggles-switches" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='toggles-switches']">Toggles &amp; Switches</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#retina-images" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='retina-images']">Retina Images</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#validation" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='validation']">Validation</a>
+                </li>
+                
+                <li>
+                  <a href="index.html#gumby-helpers" class="skip" gumby-easing="easeOutQuad" gumby-duration="600" gumby-goto="[data-target='gumby-helpers']">Gumby Helpers</a>
+                </li>
+                
+            </ul>
+          </nav>
+        </section>
+        <section class="nine columns push_one" id="docs-content">
+          
+
+          <div class="left-center" data-target="installation">
+            <h2>Installation</h2>
+            <p>The global Gumby object is where all the magic happens. It is defined in js/libs/gumby.js and is required by all UI modules (except <a href="index.html#!/validation" class="skip" gumby-goto="[data-target='validation']">jQuery plugins</a>). The UI modules are stored as separate files in js/libs/ui and should be included after gumby.js at the bottom of your page. The final include should be gumby.init.js which takes care of initializing the modules included above, as well as calling AMD's define function. This means your single optimised gumby.min.js file can be loaded asynchronously by <a href="http://requirejs.org/" target="_blank">Require.js</a> or <a href="https://github.com/cujojs/curl" target="_blank">another AMD loader</a>. The customizer will concatenate and minimize the required code into js/libs/gumby.min.js. If you download the full package or clone from GitHub we recommend you do the same in production, ensuring the global Gumby definition is at the top of your single concatenated file, followed by the required modules and finally gumby.init.js.</p>
+<p>Gumby requires <a href="http://jquery.com/" target="_blank">jQuery 2.0 or 1.9.1</a> and <a href="http://modernizr.com/" target="_blank">Modernizr</a> so make sure Modernizr is included in the <span class="label light">&lt;head&gt;</span> of your document and jQuery before Gumby at the bottom of the <span class="label light">&lt;body&gt;</span>. Check out the demo.html and ui.html templates for an example. We recommend you use a <a href="http://modernizr.com/download/" target="_blank">custom Modernizr build</a> in production, we use touch detection for Gumby Tap events so make sure that's included.</p>
+
+<div>
+<pre class="prettyprinted lang-html linenums">
+  &lt;!-- First include gumby.js --&gt;
+  &lt;script src="js/libs/gumby.js"&gt;&lt;/script&gt;
+  &lt;!-- followed by the required UI modules --&gt;
+  &lt;script src="js/libs/ui/gumby.checkbox.js"&gt;&lt;/script&gt;
+  &lt;script src="js/libs/ui/gumby.radiobtn.js"&gt;&lt;/script&gt;
+  &lt;!-- followed by gumby.init.js --&gt;
+  &lt;script src="js/libs/gumby.init.js"&gt;&lt;/script&gt;
+
+  &lt;!-- In production include a single concatenated and minimized gumby.min.js  --&gt;
+  &lt;!-- The customizer will provide you with this file  --&gt;
+  &lt;script src="js/libs/gumby.min.js"&gt;&lt;/script&gt;</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="overview">
+            <h2>Overview</h2>
+            <p>Gumby 2 JavaScript is designed to work in the background, bringing the UI kit to life automatically, without the need to write any extra JavaScript. Gumby broadcasts and listens for specific events that can be used to extend the default behaviour of UI modules. All custom events are namespaced with 'gumby' and jQuery's on() and trigger() methods make binding and triggering these events easy.</p>
+
+<p>To improve performance in Gumby 2, we removed the delegation of all UI events to the document. This means dynamically generated UI modules need initializing, each UI module has an initalization key that can be passed to the Gumby.initialize method.</p>
+
+<div>
+<pre class="prettyprinted lang-js linenums">
+  // initialize dynamic tabs
+  Gumby.initialize('tabs');
+
+  // listen for the tabs onChange event
+  $('#my-tabs').on('gumby.onChange', function() {
+      console.log('My tabs changed');
+  });
+
+  // programatically trigger toggle
+  $('#my-toggle').trigger('gumby.trigger');
+</pre>
+ </div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="touch-events">
+            <h2>Touch Events</h2>
+            <p>To improve performance on mobile devices we have a nifty little solution for handling click/tap events. 
+In gumby.init.js we use Modernizr.load to test for touch support, if found a customized build of jQuery Mobile is loaded which includes only the touch events and minified is a grand total of 6KB. 
+Once this file has loaded we update the Gumby.click property from 'click' to 'tap'. The UI modules that bind to click events use the Gumby.click property instead of simply specifying 'click', 
+this way touch enabled devices will use jQuery Mobile's tap event and receive a serious performance gain.</p>
+
+<p>You can use this property to in your JS to bind to the tap event where supported with a click fallback.</p>
+
+<div class="example-grid" id="example-click">
+  <p class="btn primary medium"><a href="index.html#"></a></p>
+</div>
+
+<div>
+<pre class="prettyprinted lang-js linenums">
+ // bind to the tap event where supported with a click fallback
+ $('#button').on(Gumby.click, function() {
+ var ev = Gumby.click === 'tap' ? 'tapped' : 'clicked';
+     alert('You '+ev+' me!');
+ });
+</pre>
+</div>
+
+          </div>
+
+          
+
+          <div class="left-center" data-target="checkboxes">
+            <h2>Checkboxes</h2>
+            <p>Checkboxes provide three events you can listen to, <span class="label light">onCheck</span> and <span class="label light">onUncheck</span> are self explanatory and <span class="label light">onChange</span>, which is emitted when either event occurs. The events <span class="label light">check</span> and <span class="label light">uncheck</span> can be triggered to programatically interact with the checkbox.</p>
+
+<div class="row example-grid" id="example-checkboxes">
+  <form>
+    <ul>
+      <li class="field">
+        <label class="checkbox" for="checkbox1" id="checkbox1">
+          <input name="checkbox1" type="checkbox">
+          <span></span> Checkbox 1
+        </label>
+        <label class="checkbox checked" for="checkbox2" id="checkbox2">
+          <input name="checkbox2" type="checkbox">
+          <span></span> Checkbox 2
+        </label>
+        <label class="checkbox" for="checkbox3" id="checkbox3">
+          <input name="checkbox3" type="checkbox">
+          <span></span> Checkbox 3
+        </label>
+      </li>
+    </ul>
+  </form>
+</div>
+
+
+<div>
+<pre class="prettyprinted lang-js linenums">// listen for checkbox state alterations
+  $('#checkbox').on('gumby.onCheck', function() {
+      console.log('Checkbox checked');
+  }).on('gumby.onUncheck', function() {
+      console.log('Checkbox unchecked');
+  }).on('gumby.onChange', function() {
+      console.log("Checkbox updated");
+  });
+
+  // check checkbox
+  $('#checkbox').trigger('gumby.check');
+
+  // initialize dynamically generated checkboxes
+  Gumby.initialize('checkboxes');</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="radio-buttons">
+            <h2>Radio Buttons</h2>
+            <p>Radio buttons provide two events, <span class="label light">onCheck</span> is emitted when the radio button is checked and <span class="label light">check</span> can be used to programatically check the radio button.</p>
+
+<div class="row example-grid" id="example-radio">
+  <form>
+    <ul>
+      <li class="field">
+        <label class="radio checked" for="radio1" id="radio1">
+          <input name="radio" value="1" type="radio" checked="checked">
+          <span></span> Radio Button 1
+        </label>
+        <label class="radio" for="radio2" id="radio2">
+          <input name="radio" value="2" type="radio">
+          <span></span> Radio Button 2
+        </label>
+        <label class="radio" for="radio3" id="radio3">
+          <input name="radio" value="3" type="radio">
+          <span></span> Radio Button 3
+        </label>
+      </li>
+    </ul>
+  </form>
+</div>
+
+
+<div>
+<pre class="prettyprinted lang-js linenums">// listen for radio button checked event
+  $('#radio-btn').on('gumby.onCheck', function() {
+      console.log('Radio button checked');
+  });
+
+  // check radio button
+  $('#radio-btn').trigger('gumby.check');
+
+  // initialize dynamically generated radio buttons
+  Gumby.initialize('radiobtns');</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="tabs">
+            <h2>Tabs</h2>
+            <p>Similarly to radio buttons, tabs emit an <span class="label light">onChange</span> event when a new tab is set as well as listening for a <span class="label light">set</span> event to allow programatic tab setting.</p>
+
+<div class="row example-grid" id="example-tabs">
+  <div class="tabs">
+    <ul class="tab-nav">
+      <li><a href="index.html#">Tab 1</a></li>
+      <li class="active"><a href="index.html#">Tab 2</a></li>
+      <li><a href="index.html#">Tab 3</a></li>
+    </ul>
+    <div class="tab-content">
+      <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p>
+    </div>
+    <div class="tab-content active">
+      <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+      <p class="btn primary"><a href="index.html#" id="activate-tab3">Activate tab 3</a></p>
+    </div>
+    <div class="tab-content">
+      <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora.</p>
+    </div>
+  </div>
+</div>
+<div>
+<pre class="prettyprinted lang-js linenums">// listen for tab change event
+  $('#tabs').on('gumby.onChange', function(e, index) {
+      console.log('Tab '+index+' set');
+  });
+
+  // set second tab (zero indexing)
+  $('#tabs').trigger('gumby.set', 1);
+
+  // initialize dynamically generated tabs
+  Gumby.initialize('tabs');</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="fixed-positions">
+            <h2>Fixed Positions</h2>
+            <p>Elements using the fixed attribute will emit <span class="label light">onFixed</span> and <span class="label light">onUnfixed</span> events as they gain and lose their fixed positions. This can be useful for modifying styles when fixed positions are added and no doubt alter your perfect layouts. If you specify an unfix point, the <span class="label light">onUnfixed</span> event will pass the callback an integer to specify the reason for the event. 0 for scrolling up past the first fixed point and 1 for scrolling down past the unfix point.</p>
+
+<div class="example-grid">
+  <p class="alert default"><i class="icon icon-eye"></i> View your browsers console, you should see a log each time the sidebar is fixed and unfixed.</p>
+</div>
+
+
+<div>
+<pre class="prettyprinted lang-js linenums">
+  // listen for radio button checked event
+  $('#my-element').on('gumby.onFixed', function() {
+      console.log('Element fixed');
+  }).on('gumby.onUnfixed', function(e, point) {
+      if(point === 0) {
+        console.log('Unfixed. Scrolled up past fix point');
+      } else if(point === 1) {
+        console.log('Unfixed. Scrolled down past unfix point');
+      }
+  });
+
+  // initialize dynamically generated fixed elements
+  Gumby.initialize('fixed');</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="skip-links">
+            <h2>Skip Links</h2>
+            <p>Skip links provide two events, the <span class="label light">onComplete</span> event is emitted once a skip link animation is complete and the <span class="label light">skip</span> event provides a way to programatically trigger the skip link.</p>
+
+<div class="example-grid" id="example-skiplinks">
+  <div class="row">
+    <p class="skiplink primary four columns">
+      <a href="index.html#" gumby-goto="#checkboxes">Checkboxes</a>
+    </p>
+    <p class="skiplink secondary four columns">
+      <a href="index.html#" gumby-goto="#radio">Radio Buttons</a>
+    </p>
+    <p class="skiplink warning four columns">
+      <a href="index.html#" gumby-goto="top">Top of Page</a>
+    </p>
+  </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-js linenums">// listen for skip link complete event
+  $('#skip-link').on('gumby.onComplete', function() {
+      console.log('Skip link complete');
+  });
+
+  // trigger skip link
+  $('#skip-link').trigger('gumby.skip');
+
+  // initialize dynamically generated skip links
+  Gumby.initialize('skiplinks');</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="toggles-switches">
+            <h2>Toggles &amp; Switches</h2>
+            <p>Toggles and Switches are handled by the same UI module and they both provide two events for extending functionality. The <span class="label light">onTrigger</span> event is emitted when a Toggle or Switch is triggered by a user, this interaction can change depending on the event defined in the gumby-on attribute. The <span class="label light">trigger</span> event can also be used to programatically trigger Toggles and Switches.</p>
+
+<div class="example-grid" id="example-toggles">
+  <div class="row">
+    <p class="btn primary five columns">
+      <a href="index.html#" class="toggle" data-trigger="body">Toggle body color</a>
+    </p>
+    <p class="btn primary seven columns">
+      <a href="index.html#" class="switch" data-trigger="|#sidebar-nav li">Switch off active sidebar item</a>
+    </p>
+  </div>
+</div>
+
+<div>
+<pre class="prettyprinted lang-js linenums">
+  // listen to a toggle and switch onComplete event
+  $('#toggle,#switch').on('gumby.onTrigger', function() {
+      console.log('Toggle triggered');
+  });
+
+  // trigger a toggle and switch
+  $('#toggle,#switch').trigger('gumby.trigger');
+
+  // initialize dynamically generated toggles/switches
+  Gumby.initialize('toggles');
+  Gumby.initialize('switches');</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="retina-images">
+            <h2>Retina Images</h2>
+            <p>The Retina UI module appends @2x to images with a <span class="label light">gumby-retina</span> attribute, on retina enabled devices if the high res image is available. An <span class="label light">onRetina</span> event is triggered once the high res image has been loaded and the image src swapped.</p>
+
+<div class="example-grid">
+  <p class="alert default"><i class="icon icon-eye"></i> Check the console on a retina supported device. We're using gumby-retina on our logo.</p>
+</div>
+
+<div>
+<pre class="prettyprinted lang-js linenums">
+  // listen for an image swapping to high res retina version
+  $('#my-img').on('gumby.onRetina', function() {
+      console.log('Image is now high res');
+  });
+
+  Gumby.initialize('retina');</pre>
+  </div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="validation">
+            <h2>Validation</h2>
+            <p>Gumby 2 includes a validation jQuery plugin. The aim of this plugin is to simplify validation without over-engineering and removing flexibility. It acts as a convenient way to organise your front end validation and interact with Gumby danger/success classes.</p>
+
+<div class="example-grid" id="example-form">
+  <form>
+    <div class="row">
+      <ul class="ten columns">
+        <li class="field">
+          <input class="text input" name="email" type="text" placeholder="Email address" />
+        </li>
+        <li class="field">
+          <input class="text input" name="birth" type="text" placeholder="Year of birth" />
+        </li>
+      </ul>
+    </div>
+    <p class="medium primary btn normarg"><input type="submit" name="submit" /></p>
+  </form>
+</div>
+
+<div class="row">
+  <section class="tabs">
+    <h4 class="lead">Options</h4>
+    <ul class="tab-nav">
+      <li class="active"><a href="index.html#">submit</a></li>
+      <li><a href="index.html#">fail</a></li>
+      <li><a href="index.html#">required</a></li>
+    </ul>
+    <div class="active tab-content">
+      <p>A function to be called onSubmit when the form passes all validation, a serialized object of form data will be passed to the callback function. If not set, or set to false, the form will be allowed to submit.</p>
+    </div>
+    <div class="tab-content">
+      <p>A function to be called onSubmit when the form fails validation.</p>
+    </div>
+    <div class="tab-content">
+      <p>An array of required field objects each of which must contain a ‘name’ property matching the form field it represents and an optional validate function. The validate function will be passed an object representing the form field element and should return a boolean indicating successful or failed validation. If omitted, validation will be tested simply on a value being present. Every field will be validated on <span class="label light">blur</span> except selects which will be validated on <span class="label light">onChange</span> and checkboxes / radio buttons which will be validated on <span class="label light">gumby.onChange</span>.</p>
+    </div>
+  </section>
+</div>
+
+<div>
+<pre class="prettyprinted lang-js linenums">
+$('form').validation({
+    required: [
+      {
+        // name field needs to simply contain a value
+        name: 'name'
+      },
+      {
+        name : 'email',
+          // email must contain an @
+        validate : function($el) {
+          return $el.val().match('@') !== null;
+        }
+      },
+      {
+        name : 'radio',
+        // radio button must be checked
+        validate: function($el) {
+          return $el.is(':checked');
+        }
+      }
+    ],
+    fail: function(failed) {
+      alert("Please fill out all the required fields");
+    },
+    submit: function(data) {
+      $.ajax({
+        url: 'do/something/with/data',
+        data: data,
+        success: function() {alert("Submitted");}
+      });
+    }
+});</pre>
+</div>
+          </div>
+
+          
+
+          <div class="left-center" data-target="gumby-helpers">
+            <h2>Gumby Helpers</h2>
+            <p>Gumby 2 JavaScript also provides several helper functions and debugging tools, all of which are housed within the global Gumby object.</p>
+
+<div class="row helperlist">
+  <div class="six columns">
+    <p><b>Gumby.ready()</b></p>
+    <p>Similar to the well known jQuery.ready method, Gumby.ready accepts a callback function and waits until the document and all Gumby UI modules have fully loaded before running.</p>
+  </div>
+  <div class="six columns push_two">
+    <p><b>Gumby.touch()</b></p>
+    <p>This method is identical to Gumby.ready(), however the callback function is only run on touch enabled devices.</p>
+  </div>
+</div>
+<div class="row helperlist">
+  <div class="six columns">
+    <p><b>Gumby.oldie()</b></p>
+    <p>This method is identical to Gumby.ready(), however the callback function is only run on Internet Explorer &lt;= version 8.</p>
+  </div>
+  <div class="six columns push_two">
+    <p><b>Gumby.debug()</b></p>
+    <p>This method returns an object containing an array of UI module information, useful for examining available events, as well as the oldie and $dom properties.</p>
+  </div>
+</div>
+<div class="row helperlist">
+  <div class="six columns">
+    <p><b>Gumby.$dom</b></p>
+    <p>The $dom property holds a cache of the document upon load. If you need the document in it’s original state.</p>
+  </div>
+  <div class="six columns push_two">
+    <p><b>Gumby.click</b></p>
+    <p>The click property will be set to 'tap' where touch events are supported otherwise falling back to 'click'. Use it in your click event handlers.</p>
+  </div>
+</div>
+<div class="row helperlist">
+  <div class="six columns">
+    <p><b>Gumby.isOldie</b></p>
+    <p>A boolean to indicate if the current client is Internet Explorer &lt;= version 8. This saves you having to query the html class attribute.</p>
+  </div>
+</div>
+
+
+<div>
+<pre class="prettyprinted lang-js linenums">
+  Gumby.ready(function() {
+    // do something when Gumby and all UI modules are ready
+  });
+
+  Gumby.oldie(function() {
+    // do something when the document is ready on .oldie browsers
+  });
+
+  // if .oldie browser, let them know!
+  if(Gumby.isOldie) {
+    alert("Why you use oldie browser?!!");
+  }
+
+  // log Gumby debug object to console
+  console.log(Gumby.debug());
+
+  // log document cache
+  console.log(Gumby.$dom);
+  
+  // bind to the tap event where supported with a click fallback
+  $('#button').on(Gumby.click, function() {
+      var ev = Gumby.click === 'tap' ? 'tapped' : 'clicked';
+      alert('You '+ev+' me!');
+  });
+</pre>
+</div>
+          </div>
+
+          
+        </section>
+      </div>
+    </div>
+  <div class="container shaded" id="subfoot">
+  	<section class="row">
+      <div class="eleven columns centered">
+        <div class="row">
+      		<article class="six columns">
+      			<h3 class="action">You simply <b class="embolden">have</b> to try it.</h3>
+          </article>
+          <div class="eight columns dl_and_docs">
+            <div class="medium metro rounded btn download primary"><a href="http://gumbyframework.com/customize">Download Gumby 2</a></div>
+            
+            <div class="medium metro rounded btn dark"><a href="http://gumbyframework.com/docs">Read the Documentation</a></div>
+      		</div>
+        </div>
+      </div>
+  	</section>
+  </div>
+
+  <div class="container">
+  	<footer class="row" id="credits">
+  		<div class="seven columns left-center">
+  			<p>Developed <span>with love</span> by your friends at <a href="http://www.digitalsurgeons.com/" target="_blank" title="Digital Marketing Agency">Digital Surgeons</a></p>
+  			<p class="disclaimer">Disclaimer: Gumby Framework holds no affiliation or association with our friends at www.gumbyworld.com, Primavision Inc. or Prema Toy Inc.</p>
+  		</div>
+  		<div class="seven columns">
+  			<div class="row">
+  				<ul class="socbtns">
+            <li><div class="btn primary"><a target="_blank" href="https://github.com/GumbyFramework/Gumby">Github</a></div></li>
+    				<li><div class="btn twitter"><a target="_blank" href="http://twitter.com/home?status=Check%20out%20the%20new%20Gumby%20Framework%202!%20http%3A%2F%2Fgumbyframework.com%20%0A%0Avia%20%40gumbycss%20%0A%23responsive%20%23sass%20%23rwd">Twitter</a></div></li>
+    				<li><div class="btn facebook"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.gumbyframework.com">Facebook</a></div></li>
+    				<li><div class="btn danger"><a target="_blank" href="https://plus.google.com/share?url=http://gumbyframework.com">Google+</a></div></li>
+          </ul>
+  			</div>
+  		</div>
+  	</footer>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+
+  <script src="../../components/gumby/js/libs/gumby.min.js"></script>
+  <script src="../../js/plugins.js"></script>
+  <script src="../../js/build/global.min.js"></script>
+  
+  <script src="../../js/build/docs.min.js?v=061213"></script>
+  
+  <script src="../../js/build/events.min.js"></script>
+  
+  <script src="../../js/libs/google-code-prettify/prettify.js"></script>
+  
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31797645-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+  <!-- Bugherd -->
+  <script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=k2wxp1tsv91hmgwvxauxga';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
+  <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"rpm-images.newrelic.com/42/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-4.newrelic.com","748b9a1a27","2063682","ZAYEbENSCENQUkNcDF1MJ1tFWgleHnRyGgpdBwNA",0,145,new Date().getTime(),"","","","",""]);</script>
+</body>
+</html>
+
